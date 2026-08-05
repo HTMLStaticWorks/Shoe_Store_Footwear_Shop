@@ -1,0 +1,136 @@
+/* Premium Footwear Store - Style System */
+
+/* Custom Font Integrations */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-title: 'Outfit', sans-serif;
+  --font-luxury: 'Cinzel', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5a880;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b08432;
+}
+
+/* Core resets & smooth transitions */
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: clip !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  transition: background-color 0.4s ease, color 0.3s ease;
+}
+
+/* Custom Text and Luxury Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  letter-spacing: -0.02em;
+}
+
+.luxury-text {
+  font-family: var(--font-luxury);
+  letter-spacing: 0.1em;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dark .glass-panel {
+  background: rgba(17, 17, 21, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Luxury Interactive Gradients */
+.luxury-gradient-gold {
+  background: linear-gradient(135deg, #c5a880 0%, #b08432 100%);
+}
+
+.luxury-gradient-dark {
+  background: linear-gradient(135deg, #1b1b1f 0%, #0a0a0c 100%);
+}
+
+/* RTL Specific Tweaks */
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* Custom CSS Keyframe Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-luxury-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Card Aspect Ratio & Image Loading hover */
+.zoom-img-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.zoom-img-container img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zoom-img-container:hover img {
+  transform: scale(1.08);
+}
+
+/* Sticky Header Styling */
+header.sticky-active {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+.dark header.sticky-active {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}

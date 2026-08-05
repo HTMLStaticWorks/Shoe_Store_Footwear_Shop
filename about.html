@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOLE | Our Heritage & Quality Standards</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c5a880' stroke-width='1.5'%3E%3Cpath d='M12 2c0 5.523 4.477 10 10 10-5.523 0-10 4.477-10 10 0-5.523-4.477-10-10-10 5.523 0 10-4.477 10-10z' fill='%23c5a880' fill-opacity='0.1'/%3E%3Cpath d='M12 8l4 4-4 4-4-4 4-4z' fill='%23c5a880'/%3E%3C/svg%3E">
+  <meta name="description"
+    content="Learn about SOLE heritage, our fine quality standards, Tuscan partners, storefront experiences, and customer satisfaction policies.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SOLE | Our Heritage & Quality Standards">
+  <meta property="og:description"
+    content="Discover our craftsmanship story, Italian leather source, and premium showroom experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              50: '#fbf8f3',
+              100: '#f5edd9',
+              200: '#ebdcb3',
+              300: '#dec283',
+              400: '#cfa252',
+              500: '#c5a880',
+              600: '#b08432',
+              700: '#946626',
+              800: '#7a511f',
+              900: '#64411a',
+            },
+            charcoal: {
+              50: '#f4f4f5',
+              100: '#e4e4e7',
+              800: '#1b1b1f',
+              900: '#111115',
+              950: '#0a0a0c',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Main Style Sheet -->
+  <link rel="stylesheet" href="style.css?v=1.2">
+</head>
+
+<body class="bg-charcoal-50 dark:bg-charcoal-950 text-charcoal-900 dark:text-zinc-100 transition-colors duration-300">
+
+  <!-- HEADER -->
+  <header
+    class="fixed top-0 left-0 right-0 z-40 bg-white/95 dark:bg-charcoal-950/95 backdrop-blur-md border-b border-gray-200/50 dark:border-white/10 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
+          <svg class="w-8 h-8 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2c0 5.523 4.477 10 10 10-5.523 0-10 4.477-10 10 0-5.523-4.477-10-10-10 5.523 0 10-4.477 10-10z"
+              fill="currentColor" fill-opacity="0.1" />
+            <path d="M12 8l4 4-4 4-4-4 4-4z" fill="currentColor" />
+          </svg>
+          <span class="text-2xl font-bold tracking-widest luxury-text text-gold-500">
+            SOLE.
+          </span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden lg:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-charcoal-900 dark:text-gray-300">
+          <a href="index.html" class="hover:text-gold-500 transition-colors">Home 1</a>
+          <a href="home2.html" class="hover:text-gold-500 transition-colors">Home 2</a>
+          <a href="shop.html" class="hover:text-gold-500 transition-colors">Shop</a>
+          <a href="about.html" class="text-gold-500 font-bold transition-colors">About Us</a>
+          <a href="blog.html" class="hover:text-gold-500 transition-colors">Blog</a>
+          <a href="contact.html" class="hover:text-gold-500 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Desktop Actions -->
+        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+          <button
+            class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/30 hover:bg-gold-500/10 text-gold-500 font-bold text-xs transition-all duration-300 shrink-0">
+            <span class="rtl-btn-text">RTL</span>
+          </button>
+          <button
+            class="theme-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gray-200 dark:border-white/10 text-charcoal-900 dark:text-gray-300 hover:text-gold-500 dark:hover:text-gold-500 transition-colors shrink-0">
+            <span class="theme-icon"></span>
+          </button>
+          <a href="signup.html"
+            class="px-5 py-2 bg-charcoal-950 hover:bg-gold-500 dark:bg-gold-500 dark:hover:bg-gold-600 dark:text-charcoal-950 text-white font-semibold text-sm rounded-full transition-all duration-300 shadow-md">Sign
+            Up</a>
+        </div>
+
+        <!-- Mobile Controls (Hamburger) -->
+        <div class="flex items-center space-x-3 rtl:space-x-reverse lg:hidden">
+          <button id="mobile-menu-btn"
+            class="w-9 h-9 rounded-full flex items-center justify-center text-charcoal-900 dark:text-white hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-all duration-300 shrink-0">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black z-45 hidden opacity-0 transition-opacity duration-300">
+  </div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-nav-drawer"
+    class="fixed top-0 right-0 bottom-0 z-50 w-80 bg-white dark:bg-charcoal-900 shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col justify-between invisible">
+    <div>
+      <div class="flex items-center justify-between mb-8">
+        <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
+          <svg class="w-8 h-8 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2c0 5.523 4.477 10 10 10-5.523 0-10 4.477-10 10 0-5.523-4.477-10-10-10 5.523 0 10-4.477 10-10z"
+              fill="currentColor" fill-opacity="0.1" />
+            <path d="M12 8l4 4-4 4-4-4 4-4z" fill="currentColor" />
+          </svg>
+          <span class="text-2xl font-bold tracking-widest luxury-text text-gold-500">
+            SOLE.
+          </span>
+        </a>
+        <button id="close-mobile-menu-btn"
+          class="p-2 text-charcoal-900 dark:text-white rounded-full hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-colors">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="space-y-4">
+        <a href="index.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 1</a>
+        <a href="home2.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 2</a>
+        <a href="shop.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Shop</a>
+        <a href="about.html" class="block text-lg font-bold text-gold-500 py-2">About Us</a>
+        <a href="blog.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Blog</a>
+        <a href="contact.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Contact</a>
+      </nav>
+    </div>
+
+    <div class="space-y-4 border-t border-gray-100 dark:border-white/10 pt-6">
+      <div class="flex items-center justify-center space-x-4 mb-4 rtl:space-x-reverse">
+        <button
+          class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/30 hover:bg-gold-500/10 text-gold-500 font-bold text-xs transition-all duration-300 shrink-0">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+        <button
+          class="theme-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gray-200 dark:border-white/10 text-charcoal-900 dark:text-gray-300 hover:text-gold-500 dark:hover:text-gold-500 transition-colors shrink-0">
+          <span class="theme-icon"></span>
+        </button>
+      </div>
+      <a href="signup.html"
+        class="block text-center py-3 bg-gold-500 text-charcoal-950 font-bold rounded-xl hover:bg-gold-600 transition-colors">Sign
+        Up</a>
+    </div>
+  </div>
+
+  <!-- Hero About Section -->
+  <section class="relative bg-zinc-950 py-32 text-center text-white overflow-hidden w-full">
+    <div class="absolute inset-0 opacity-20">
+      <img src="https://images.pexels.com/photos/35654932/pexels-photo-35654932.jpeg" alt="About page banner backdrop"
+        class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 mt-8">
+      <span class="text-gold-500 uppercase tracking-widest text-xs font-bold block mb-2">OUR HERITAGE</span>
+      <h1 class="text-4xl sm:text-6xl font-black luxury-text">The SOLE Chronicle</h1>
+    </div>
+  </section>
+
+  <!-- SECTION 1: Company Story -->
+  <section class="py-24 bg-white dark:bg-charcoal-900 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-6">
+          <span class="text-gold-500 uppercase tracking-widest text-xs font-bold block">SINCE 1998</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-charcoal-900 dark:text-white">Our Humble Beginnings</h2>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+            Founded in a small workshop in Florence, Italy, SOLE began with a simple mission: to create formal business
+            shoes that do not compromise orthotic health. Our founder, a master cordwainer, believed that style should
+            feel like walking on air.
+          </p>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+            Today, we are a global luxury footwear house, maintaining artisanal hubs in Tuscany and design laboratories
+            in New York. We craft casual sneakers, heavy outdoor boots, and sports trainers.
+          </p>
+        </div>
+        <div class="relative h-[28rem] rounded-2xl overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&q=80&w=800"
+            alt="Shoemaker working at Tuscan bench" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Mission & Vision -->
+  <section class="py-24 bg-zinc-50 dark:bg-charcoal-950 border-t border-black/5 dark:border-white/5 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div
+          class="bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 p-8 rounded-2xl shadow-sm space-y-4">
+          <div class="p-3 bg-gold-500/10 text-gold-500 rounded-full w-12 h-12 flex items-center justify-center"><i
+              data-lucide="compass" class="w-6 h-6"></i></div>
+          <h3 class="text-xl font-bold text-charcoal-900 dark:text-white">Our Mission</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            To innovate footwear ergonomics, blending century-old hand-stitched welt standards with eco-friendly
+            cushioning to deliver elite products that respect human feet and the environment.
+          </p>
+        </div>
+
+        <div
+          class="bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 p-8 rounded-2xl shadow-sm space-y-4">
+          <div class="p-3 bg-gold-500/10 text-gold-500 rounded-full w-12 h-12 flex items-center justify-center"><i
+              data-lucide="eye" class="w-6 h-6"></i></div>
+          <h3 class="text-xl font-bold text-charcoal-900 dark:text-white">Our Vision</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            To lead global luxury fashion in setting sustainable shoe standards, assuring that every single pair uses
+            fully traceable hides and recycled vulcanized polymers by 2030.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Our Quality Standards -->
+  <section class="py-24 bg-white dark:bg-charcoal-900 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-gold-500 uppercase tracking-widest text-xs font-bold block mb-3">EXCELLENCE CERTIFIED</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-charcoal-900 dark:text-white">Our Quality Standards</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 text-center space-y-3">
+          <div class="text-gold-500 font-bold text-3xl font-serif">100%</div>
+          <h4 class="font-bold text-charcoal-900 dark:text-white">Italian Calfskin</h4>
+          <p class="text-xs text-gray-500">Every batch of leather is inspected by Florence artisan guilds to verify
+            fiber density and thickness.</p>
+        </div>
+        <div class="p-6 text-center space-y-3">
+          <div class="text-gold-500 font-bold text-3xl font-serif">24 Hours</div>
+          <h4 class="font-bold text-charcoal-900 dark:text-white">Sole Flex Tests</h4>
+          <p class="text-xs text-gray-500">All sports runner soles endure 100,000 compression cycles to ensure long-term
+            energy return.</p>
+        </div>
+        <div class="p-6 text-center space-y-3">
+          <div class="text-gold-500 font-bold text-3xl font-serif">Double</div>
+          <h4 class="font-bold text-charcoal-900 dark:text-white">Stitched Seams</h4>
+          <p class="text-xs text-gray-500">Using premium waxed flax threads, guaranteeing that shoe panels never
+            separate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Featured Brands -->
+  <section class="py-16 bg-zinc-50 dark:bg-charcoal-950 border-y border-black/5 dark:border-white/5 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center items-center font-bold text-lg text-gray-400 uppercase tracking-widest">
+        <span>SOLE Italy</span>
+        <span>Kinetic Grip</span>
+        <span>Monarch Lthr</span>
+        <span>Steps Athletics</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Why Customers Trust Us -->
+  <section class="py-24 bg-white dark:bg-charcoal-900 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="relative h-[28rem] rounded-2xl overflow-hidden shadow-xl">
+          <img src="https://images.pexels.com/photos/38869790/pexels-photo-38869790.jpeg"
+            alt="Detailed leather shoe inspect" class="w-full h-full object-cover">
+        </div>
+
+        <div class="space-y-6">
+          <span class="text-gold-500 uppercase tracking-widest text-xs font-bold block">TRUST MATRIX</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-charcoal-900 dark:text-white">Why Customers Trust Us</h2>
+          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+            Trust is earned through transparency and care. All our footwear is backed by an authentication card
+            containing material tracing codes. In addition, we support a 30-day sizing return program that eliminates
+            online shopping anxiety.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3 rtl:space-x-reverse"><i data-lucide="check"
+                class="w-5 h-5 text-gold-500"></i> <span class="text-sm font-semibold">10-Year Craft Guarantee</span>
+            </div>
+            <div class="flex items-center space-x-3 rtl:space-x-reverse"><i data-lucide="check"
+                class="w-5 h-5 text-gold-500"></i> <span class="text-sm font-semibold">No-Quibble Returns
+                Concierge</span></div>
+            <div class="flex items-center space-x-3 rtl:space-x-reverse"><i data-lucide="check"
+                class="w-5 h-5 text-gold-500"></i> <span class="text-sm font-semibold">Bespoke Fit Adjustments</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: Store Experience -->
+  <section class="py-24 bg-zinc-50 dark:bg-charcoal-950 border-t border-black/5 dark:border-white/5 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-gold-500 uppercase tracking-widest text-xs font-bold block mb-3">PHYSICAL TOUCHPOINTS</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-charcoal-900 dark:text-white">Our Store Experience</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="relative h-[24rem] rounded-2xl overflow-hidden shadow-lg group">
+          <img src="https://images.pexels.com/photos/32988266/pexels-photo-32988266.jpeg" alt="Flagship showroom view"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 to-transparent flex flex-col justify-end p-6 text-white">
+            <h4 class="font-bold text-lg">New York Flagship Showroom</h4>
+            <p class="text-xs text-gray-300 mt-2">Private fit chambers and styling lounges located in SOHO.</p>
+          </div>
+        </div>
+
+        <div class="relative h-[24rem] rounded-2xl overflow-hidden shadow-lg group">
+          <img src="https://images.pexels.com/photos/3913024/pexels-photo-3913024.jpeg"
+            alt="Atelier custom tailoring workshop"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 to-transparent flex flex-col justify-end p-6 text-white">
+            <h4 class="font-bold text-lg">Milan Atelier & Tailors</h4>
+            <p class="text-xs text-gray-300 mt-2">Custom molding, orthotic sizing, and custom hand finishes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: Customer Satisfaction -->
+  <section class="py-24 bg-white dark:bg-charcoal-900 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 max-w-3xl mx-auto">
+      <span class="text-gold-500 uppercase tracking-widest text-xs font-bold block">OUR PROMISE</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-charcoal-900 dark:text-white">Customer Satisfaction Guarantee
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+        If you are not entirely satisfied with your SOLE shoes, you can exchange them within 30 days. No restocking
+        fees. We cover standard collection shipping from your residence to make returns seamless.
+      </p>
+      <div
+        class="flex justify-center space-x-6 rtl:space-x-reverse pt-4 text-xs font-semibold text-charcoal-900 dark:text-white">
+        <span class="flex items-center space-x-1"><i data-lucide="shield-check" class="w-4 h-4 text-gold-500"></i>
+          <span>SECURE PAYMENTS</span></span>
+        <span class="flex items-center space-x-1"><i data-lucide="refresh-cw" class="w-4 h-4 text-gold-500"></i>
+          <span>FREE SWAPS</span></span>
+        <span class="flex items-center space-x-1"><i data-lucide="headphones" class="w-4 h-4 text-gold-500"></i>
+          <span>24/7 HELPLINE</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: Call To Action -->
+  <section class="py-20 relative overflow-hidden bg-charcoal-950 text-white border-t border-white/5 text-center w-full">
+    <div class="absolute inset-0 opacity-10">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=1200"
+        alt="Call to action background" class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 space-y-6">
+      <h2 class="text-3xl md:text-5xl font-bold luxury-text">READY FOR A PERFECT FIT?</h2>
+      <p class="text-gray-300 max-w-xl mx-auto text-sm leading-relaxed">
+        Explore our comprehensive footwear collections or inquire about custom sizes today.
+      </p>
+      <div class="flex items-center justify-center gap-4">
+        <a href="shop.html"
+          class="px-8 py-4 bg-gold-500 hover:bg-gold-600 text-charcoal-950 font-bold rounded-full transition-all text-sm shadow-md">
+          Shop Catalog
+        </a>
+        <a href="contact.html"
+          class="px-8 py-4 border border-white/20 hover:border-gold-500 hover:text-gold-500 text-white font-bold rounded-full transition-all text-sm">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer
+    class="bg-zinc-100 dark:bg-charcoal-950 text-gray-600 dark:text-gray-400 pt-20 pb-10 border-t border-gray-200 dark:border-white/5 font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+
+        <!-- Box 1: Brand & Info -->
+        <div class="lg:col-span-2 space-y-6">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
+            <svg class="w-8 h-8 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M12 2c0 5.523 4.477 10 10 10-5.523 0-10 4.477-10 10 0-5.523-4.477-10-10-10 5.523 0 10-4.477 10-10z"
+                fill="currentColor" fill-opacity="0.1" />
+              <path d="M12 8l4 4-4 4-4-4 4-4z" fill="currentColor" />
+            </svg>
+            <span class="text-2xl font-bold tracking-widest text-gold-500 luxury-text">
+              SOLE.
+            </span>
+          </a>
+          <p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400 max-w-sm">
+            SOLE defines the pinnacle of luxury and comfort in footwear. Handcrafting bespoke leather formal shoes,
+            modern urban sneakers, and high-performance sports footwear.
+          </p>
+          <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <p class="flex items-center space-x-2 rtl:space-x-reverse">
+              <i data-lucide="map-pin" class="w-4 h-4 text-gold-500"></i>
+              <span>742 Luxury Boulevard, Fashion District, NY</span>
+            </p>
+            <p class="flex items-center space-x-2 rtl:space-x-reverse">
+              <i data-lucide="phone" class="w-4 h-4 text-gold-500"></i>
+              <span>+1 (800) 234-5678</span>
+            </p>
+            <p class="flex items-center space-x-2 rtl:space-x-reverse">
+              <i data-lucide="clock" class="w-4 h-4 text-gold-500"></i>
+              <span>Mon - Sat: 9:00 AM - 9:00 PM | Sun: Closed</span>
+            </p>
+          </div>
+          <div class="flex space-x-4 rtl:space-x-reverse">
+            <a href="#"
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#"
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#"
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#"
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+        </div>
+
+        <!-- Box 2: Quick Links & Categories -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-semibold tracking-wider text-charcoal-900 dark:text-white uppercase">Categories</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="shop.html?category=Casual" class="hover:text-gold-500 transition-colors">Casual Shoes</a></li>
+            <li><a href="shop.html?category=Formal" class="hover:text-gold-500 transition-colors">Formal Shoes</a></li>
+            <li><a href="shop.html?category=Sports" class="hover:text-gold-500 transition-colors">Sports Shoes</a></li>
+            <li><a href="shop.html?category=Sneakers" class="hover:text-gold-500 transition-colors">Urban Sneakers</a>
+            </li>
+            <li><a href="shop.html?category=Kids" class="hover:text-gold-500 transition-colors">Kids Footwear</a></li>
+            <li><a href="shop.html?category=Premium" class="hover:text-gold-500 transition-colors">Premium
+                Collections</a></li>
+          </ul>
+        </div>
+
+        <!-- Box 3: Services -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-semibold tracking-wider text-charcoal-900 dark:text-white uppercase">Customer Services
+          </h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="open-size-guide-btn hover:text-gold-500 transition-colors">Size Guide &
+                Conversions</a></li>
+            <li><a href="about.html" class="hover:text-gold-500 transition-colors">Shipping & Delivery Info</a></li>
+            <li><a href="about.html" class="hover:text-gold-500 transition-colors">Return & Refund Policy</a></li>
+            <li><a href="contact.html#faq-section" class="hover:text-gold-500 transition-colors">Frequently Asked
+                Questions</a></li>
+            <li><a href="contact.html" class="hover:text-gold-500 transition-colors">Bulk Order Inquiry</a></li>
+            <li><a href="about.html" class="hover:text-gold-500 transition-colors">Why Customers Trust Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Box 4: Newsletter -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-semibold tracking-wider text-charcoal-900 dark:text-white uppercase">Newsletter</h4>
+          <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+            Subscribe to our luxury circle to receive early drops, style advice, and private sale codes.
+          </p>
+          <form class="newsletter-form flex flex-col space-y-2">
+            <input type="email" placeholder="Your luxury email..." required
+              class="px-4 py-3 rounded-lg bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-charcoal-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-gold-500 text-sm w-full transition-all">
+            <button type="submit"
+              class="px-4 py-3 rounded-lg bg-gold-500 hover:bg-gold-600 text-charcoal-950 font-bold transition-all text-sm w-full">
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div
+        class="pt-8 border-t border-gray-200 dark:border-white/5 text-center md:flex md:justify-between md:items-center text-xs text-gray-500">
+        <p>&copy; 2026 SOLE Footwear Group. All luxury rights reserved.</p>
+        <div class="mt-4 md:mt-0 space-x-4 rtl:space-x-reverse">
+          <a href="#" class="hover:text-gold-500">Privacy Policy</a>
+          <a href="#" class="hover:text-gold-500">Terms of Service</a>
+          <a href="#" class="hover:text-gold-500">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Size Guide Modal -->
+  <div id="size-guide-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
+    <div
+      class="relative w-full max-w-4xl bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/10 rounded-2xl shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto animate-fade-in-up text-charcoal-900 dark:text-white">
+      <div class="flex items-center justify-between mb-6 pb-4 border-b border-gray-100 dark:border-white/10">
+        <h3 class="text-2xl font-bold luxury-text">SIZE GUIDE & CONVERSIONS</h3>
+        <button
+          class="close-size-guide-btn p-2 rounded-full hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-colors">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="space-y-8 text-sm">
+        <div>
+          <p class="text-gray-600 dark:text-gray-400">
+            Find your perfect fit. Compare international sizing or use our simple measurement guide below. Feel free to
+            contact our footwear specialists if you require further styling assistance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="space-y-3">
+            <h4 class="font-bold text-gold-500 uppercase tracking-wider">Men's Size Chart</h4>
+            <div class="overflow-x-auto border border-gray-100 dark:border-white/10 rounded-lg">
+              <table class="w-full text-left rtl:text-right text-xs">
+                <thead class="bg-gray-50 dark:bg-charcoal-800 text-gray-700 dark:text-gray-300">
+                  <tr>
+                    <th class="p-3">US</th>
+                    <th class="p-3">UK</th>
+                    <th class="p-3">EU</th>
+                    <th class="p-3">CM</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 dark:divide-white/10">
+                  <tr>
+                    <td class="p-3 font-semibold">8</td>
+                    <td class="p-3">7</td>
+                    <td class="p-3">41</td>
+                    <td class="p-3">26.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">9</td>
+                    <td class="p-3">8</td>
+                    <td class="p-3">42</td>
+                    <td class="p-3">27.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">10</td>
+                    <td class="p-3">9</td>
+                    <td class="p-3">43</td>
+                    <td class="p-3">28.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">11</td>
+                    <td class="p-3">10</td>
+                    <td class="p-3">44.5</td>
+                    <td class="p-3">29.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">12</td>
+                    <td class="p-3">11</td>
+                    <td class="p-3">46</td>
+                    <td class="p-3">30.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="font-bold text-gold-500 uppercase tracking-wider">Women's Size Chart</h4>
+            <div class="overflow-x-auto border border-gray-100 dark:border-white/10 rounded-lg">
+              <table class="w-full text-left rtl:text-right text-xs">
+                <thead class="bg-gray-50 dark:bg-charcoal-800 text-gray-700 dark:text-gray-300">
+                  <tr>
+                    <th class="p-3">US</th>
+                    <th class="p-3">UK</th>
+                    <th class="p-3">EU</th>
+                    <th class="p-3">CM</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 dark:divide-white/10">
+                  <tr>
+                    <td class="p-3 font-semibold">6</td>
+                    <td class="p-3">4</td>
+                    <td class="p-3">37</td>
+                    <td class="p-3">23.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">7</td>
+                    <td class="p-3">5</td>
+                    <td class="p-3">38</td>
+                    <td class="p-3">24.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">8</td>
+                    <td class="p-3">6</td>
+                    <td class="p-3">39</td>
+                    <td class="p-3">25.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">9</td>
+                    <td class="p-3">7</td>
+                    <td class="p-3">40</td>
+                    <td class="p-3">26.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">10</td>
+                    <td class="p-3">8</td>
+                    <td class="p-3">41</td>
+                    <td class="p-3">27.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="font-bold text-gold-500 uppercase tracking-wider">Kids' Size Chart</h4>
+            <div class="overflow-x-auto border border-gray-100 dark:border-white/10 rounded-lg">
+              <table class="w-full text-left rtl:text-right text-xs">
+                <thead class="bg-gray-50 dark:bg-charcoal-800 text-gray-700 dark:text-gray-300">
+                  <tr>
+                    <th class="p-3">US Youth</th>
+                    <th class="p-3">UK</th>
+                    <th class="p-3">EU</th>
+                    <th class="p-3">CM</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 dark:divide-white/10">
+                  <tr>
+                    <td class="p-3 font-semibold">1Y</td>
+                    <td class="p-3">13.5</td>
+                    <td class="p-3">32</td>
+                    <td class="p-3">20.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">2Y</td>
+                    <td class="p-3">1.5</td>
+                    <td class="p-3">33.5</td>
+                    <td class="p-3">21.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">3Y</td>
+                    <td class="p-3">2.5</td>
+                    <td class="p-3">35</td>
+                    <td class="p-3">22.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">4Y</td>
+                    <td class="p-3">3.5</td>
+                    <td class="p-3">36</td>
+                    <td class="p-3">23.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h4 class="font-bold text-gold-500 uppercase tracking-wider">How to Measure Your Feet</h4>
+            <div class="space-y-2 text-xs text-gray-600 dark:text-gray-400">
+              <p><strong>Step 1:</strong> Tape a piece of paper flat to the floor against a solid wall.</p>
+              <p><strong>Step 2:</strong> Stand on the paper with your heel firmly touching the wall.</p>
+              <p><strong>Step 3:</strong> Draw a line at the longest part of your foot (usually your big toe).</p>
+              <p><strong>Step 4:</strong> Use a ruler to measure the distance in centimeters, then look up your size on
+                our conversion charts.</p>
+              <p class="mt-2 text-gold-500 font-semibold flex items-center space-x-1"><i data-lucide="sparkles"
+                  class="w-3.5 h-3.5"></i> <span>Fit Recommendation: If between sizes, order a half-size larger.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- Global App Script -->
+  <script src="app.js"></script>
+</body>
+
+</html>

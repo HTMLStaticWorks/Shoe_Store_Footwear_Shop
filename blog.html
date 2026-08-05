@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOLE | Luxury Footwear Blog</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c5a880' stroke-width='1.5'%3E%3Cpath d='M12 2c0 5.523 4.477 10 10 10-5.523 0-10 4.477-10 10 0-5.523-4.477-10-10-10 5.523 0 10-4.477 10-10z' fill='%23c5a880' fill-opacity='0.1'/%3E%3Cpath d='M12 8l4 4-4 4-4-4 4-4z' fill='%23c5a880'/%3E%3C/svg%3E">
+  <meta name="description"
+    content="Stay ahead with SOLE luxury footwear editorial. Style guides, leather maintenance tutorials, sports trainer insights, and seasonal footwear fashion.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SOLE | Luxury Footwear Blog">
+  <meta property="og:description"
+    content="Read styling guides, leather care instructions, and footwear fashion trends.">
+  <meta property="og:type" content="website">
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              50: '#fbf8f3',
+              100: '#f5edd9',
+              200: '#ebdcb3',
+              300: '#dec283',
+              400: '#cfa252',
+              500: '#c5a880',
+              600: '#b08432',
+              700: '#946626',
+              800: '#7a511f',
+              900: '#64411a',
+            },
+            charcoal: {
+              50: '#f4f4f5',
+              100: '#e4e4e7',
+              800: '#1b1b1f',
+              900: '#111115',
+              950: '#0a0a0c',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Main Style Sheet -->
+  <link rel="stylesheet" href="style.css?v=1.2">
+</head>
+
+<body class="bg-charcoal-50 dark:bg-charcoal-950 text-charcoal-900 dark:text-zinc-100 transition-colors duration-300">
+
+  <!-- HEADER -->
+  <header
+    class="fixed top-0 left-0 right-0 z-40 bg-white/95 dark:bg-charcoal-950/95 backdrop-blur-md border-b border-gray-200/50 dark:border-white/10 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
+          <svg class="w-8 h-8 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2c0 5.523 4.477 10 10 10-5.523 0-10 4.477-10 10 0-5.523-4.477-10-10-10 5.523 0 10-4.477 10-10z"
+              fill="currentColor" fill-opacity="0.1" />
+            <path d="M12 8l4 4-4 4-4-4 4-4z" fill="currentColor" />
+          </svg>
+          <span class="text-2xl font-bold tracking-widest luxury-text text-gold-500">
+            SOLE.
+          </span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden lg:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-charcoal-900 dark:text-gray-300">
+          <a href="index.html" class="hover:text-gold-500 transition-colors">Home 1</a>
+          <a href="home2.html" class="hover:text-gold-500 transition-colors">Home 2</a>
+          <a href="shop.html" class="hover:text-gold-500 transition-colors">Shop</a>
+          <a href="about.html" class="hover:text-gold-500 transition-colors">About Us</a>
+          <a href="blog.html" class="text-gold-500 font-bold transition-colors">Blog</a>
+          <a href="contact.html" class="hover:text-gold-500 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Desktop Actions -->
+        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+          <button
+            class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/30 hover:bg-gold-500/10 text-gold-500 font-bold text-xs transition-all duration-300 shrink-0">
+            <span class="rtl-btn-text">RTL</span>
+          </button>
+          <button
+            class="theme-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gray-200 dark:border-white/10 text-charcoal-900 dark:text-gray-300 hover:text-gold-500 dark:hover:text-gold-500 transition-colors shrink-0">
+            <span class="theme-icon"></span>
+          </button>
+          <a href="signup.html"
+            class="px-5 py-2 bg-charcoal-950 hover:bg-gold-500 dark:bg-gold-500 dark:hover:bg-gold-600 dark:text-charcoal-950 text-white font-semibold text-sm rounded-full transition-all duration-300 shadow-md">Sign
+            Up</a>
+        </div>
+
+        <!-- Mobile Controls (Hamburger) -->
+        <div class="flex items-center space-x-3 rtl:space-x-reverse lg:hidden">
+          <button id="mobile-menu-btn"
+            class="w-9 h-9 rounded-full flex items-center justify-center text-charcoal-900 dark:text-white hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-all duration-300 shrink-0">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black z-45 hidden opacity-0 transition-opacity duration-300">
+  </div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-nav-drawer"
+    class="fixed top-0 right-0 bottom-0 z-50 w-80 bg-white dark:bg-charcoal-900 shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col justify-between invisible">
+    <div>
+      <div class="flex items-center justify-between mb-8">
+        <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
+          <svg class="w-8 h-8 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2c0 5.523 4.477 10 10 10-5.523 0-10 4.477-10 10 0-5.523-4.477-10-10-10 5.523 0 10-4.477 10-10z"
+              fill="currentColor" fill-opacity="0.1" />
+            <path d="M12 8l4 4-4 4-4-4 4-4z" fill="currentColor" />
+          </svg>
+          <span class="text-2xl font-bold tracking-widest luxury-text text-gold-500">
+            SOLE.
+          </span>
+        </a>
+        <button id="close-mobile-menu-btn"
+          class="p-2 text-charcoal-900 dark:text-white rounded-full hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-colors">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="space-y-4">
+        <a href="index.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 1</a>
+        <a href="home2.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 2</a>
+        <a href="shop.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Shop</a>
+        <a href="about.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">About Us</a>
+        <a href="blog.html" class="block text-lg font-bold text-gold-500 py-2">Blog</a>
+        <a href="contact.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Contact</a>
+      </nav>
+    </div>
+
+    <div class="space-y-4 border-t border-gray-100 dark:border-white/10 pt-6">
+      <div class="flex items-center justify-center space-x-4 mb-4 rtl:space-x-reverse">
+        <button
+          class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/30 hover:bg-gold-500/10 text-gold-500 font-bold text-xs transition-all duration-300 shrink-0">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+        <button
+          class="theme-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gray-200 dark:border-white/10 text-charcoal-900 dark:text-gray-300 hover:text-gold-500 dark:hover:text-gold-500 transition-colors shrink-0">
+          <span class="theme-icon"></span>
+        </button>
+      </div>
+      <a href="signup.html"
+        class="block text-center py-3 bg-gold-500 text-charcoal-950 font-bold rounded-xl hover:bg-gold-600 transition-colors">Sign
+        Up</a>
+    </div>
+  </div>
+
+  <!-- Blog Hero & Search Header -->
+  <section class="relative bg-zinc-950 py-24 text-white overflow-hidden animate-fade-in w-full">
+    <div class="absolute inset-0 opacity-55">
+      <img src="https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?auto=format&fit=crop&q=80&w=1200"
+        alt="SOLE Editorial Chronicles backdrop" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/35 to-transparent"></div>
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+      <div>
+        <span class="text-gold-500 uppercase tracking-widest text-xs font-bold block mb-2">SOLE EDITORIAL</span>
+        <h1 class="text-3xl sm:text-5xl font-black luxury-text">Footwear Chronicles</h1>
+      </div>
+      <!-- Search & Filters -->
+      <div class="flex items-center gap-4 w-full md:w-auto">
+        <div class="relative w-full md:w-64">
+          <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+            <i data-lucide="search" class="w-4 h-4"></i>
+          </span>
+          <input type="text" placeholder="Search articles..."
+            class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-white/30 bg-white/15 text-sm text-white placeholder-gray-300 focus:outline-none focus:bg-white/25 focus:border-gold-500 transition-all duration-300">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: Featured Article -->
+  <section class="py-16 bg-white dark:bg-charcoal-900 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="bg-charcoal-50 dark:bg-charcoal-950 border border-gray-100 dark:border-white/5 rounded-3xl overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div class="h-96 lg:h-full zoom-img-container">
+          <img src="https://images.pexels.com/photos/15341680/pexels-photo-15341680.jpeg"
+            alt="Featured sneakers blog image" class="w-full h-full object-cover">
+        </div>
+        <div class="p-8 sm:p-12 space-y-4">
+          <span class="text-gold-500 text-xs font-bold uppercase tracking-widest">FEATURED EDITORIAL</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-charcoal-900 dark:text-white leading-tight">The Evolution
+            of Urban Sneakers: Balancing Aesthetics and Ergonomics</h2>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+            In 2026, street luxury isn't just about labels. It is defined by structural engineering. Read how master
+            shoemakers combine double vulcanized platform soles with orthotic arch systems to protect urban commuters.
+          </p>
+          <div class="flex items-center space-x-4 rtl:space-x-reverse pt-4 text-xs font-semibold text-gray-500">
+            <span>By Marcus Sterling</span>
+            <span>&bull;</span>
+            <span>May 18, 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Latest Fashion Trends -->
+  <section class="py-16 bg-zinc-50 dark:bg-charcoal-950 border-t border-black/5 dark:border-white/5 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-gold-500 uppercase tracking-widest text-xs font-bold block mb-3">TREND REPORT</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-charcoal-900 dark:text-white">Latest Fashion Trends</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          class="bg-white dark:bg-charcoal-900 rounded-2xl overflow-hidden shadow-md flex flex-col sm:flex-row border border-gray-100 dark:border-white/5">
+          <div class="w-full sm:w-2/5 h-48 sm:h-auto zoom-img-container">
+            <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&q=80&w=400"
+              alt="Monk strap shoes trend" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 w-full sm:w-3/5 space-y-3">
+            <span class="text-[10px] text-gold-500 font-bold uppercase tracking-wider">TRENDING</span>
+            <h4 class="font-bold text-sm text-charcoal-900 dark:text-white">Why Double Monk Straps are Reclaiming
+              Business Spaces</h4>
+            <p class="text-xs text-gray-500 leading-relaxed line-clamp-2">Ditching laces for polished brass buckles,
+              modern boards represent a blend of classic tailored aesthetic and bold styling.</p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white dark:bg-charcoal-900 rounded-2xl overflow-hidden shadow-md flex flex-col sm:flex-row border border-gray-100 dark:border-white/5">
+          <div class="w-full sm:w-2/5 h-48 sm:h-auto zoom-img-container">
+            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&q=80&w=400"
+              alt="Loafer design trend" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 w-full sm:w-3/5 space-y-3">
+            <span class="text-[10px] text-gold-500 font-bold uppercase tracking-wider">TRENDING</span>
+            <h4 class="font-bold text-sm text-charcoal-900 dark:text-white">The Rise of Tuscan Loafers in Smart Casual
+              Settings</h4>
+            <p class="text-xs text-gray-500 leading-relaxed line-clamp-2">Loafers provide simple, breathable slips that
+              pair beautifully with cotton blazers and slim jeans.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Shoe Care Tips -->
+  <section class="py-16 bg-white dark:bg-charcoal-900 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <!-- Care 1 -->
+        <div class="space-y-4 border-b border-gray-100 dark:border-white/5 lg:border-b-0 pb-8 lg:pb-0">
+          <div class="h-56 rounded-2xl overflow-hidden zoom-img-container">
+            <img src="https://images.pexels.com/photos/37358113/pexels-photo-37358113.jpeg"
+              alt="Leather shoes cleaning guide" class="w-full h-full object-cover">
+          </div>
+          <span class="text-gold-500 text-[10px] font-bold uppercase tracking-widest block">SHOE CARE TUTORIAL</span>
+          <h4 class="font-bold text-sm text-charcoal-900 dark:text-white">Preserving Full-Grain Calfskin: Polishing and
+            Storing</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            Using cedar shoe trees and organic carnauba waxes prevents dry creases and controls inside leather moisture
+            levels.
+          </p>
+        </div>
+
+        <!-- Care 2 -->
+        <div class="space-y-4 border-b border-gray-100 dark:border-white/5 lg:border-b-0 pb-8 lg:pb-0">
+          <div class="h-56 rounded-2xl overflow-hidden zoom-img-container">
+            <img src="https://images.pexels.com/photos/4914661/pexels-photo-4914661.jpeg" alt="Cleaning white sneakers"
+              class="w-full h-full object-cover">
+          </div>
+          <span class="text-gold-500 text-[10px] font-bold uppercase tracking-widest block">SHOE CARE TUTORIAL</span>
+          <h4 class="font-bold text-sm text-charcoal-900 dark:text-white">How to Clean Delicate White Knit Outsoles
+            Safely</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            Avoid washers. Clean stains by using gentle baking soda sprays and soft horsehair brushes to maintain white
+            brilliance.
+          </p>
+        </div>
+
+        <!-- Care 3 -->
+        <div class="space-y-4">
+          <div class="h-56 rounded-2xl overflow-hidden zoom-img-container">
+            <img src="https://images.pexels.com/photos/11893741/pexels-photo-11893741.jpeg" alt="Suede shoe protection"
+              class="w-full h-full object-cover">
+          </div>
+          <span class="text-gold-500 text-[10px] font-bold uppercase tracking-widest block">SHOE CARE TUTORIAL</span>
+          <h4 class="font-bold text-sm text-charcoal-900 dark:text-white">Protecting Luxury Suede from Intense Monsoon
+            Rain</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            Apply nano-protection fluorocarbon sprays before wearing. Brush dirt off in single directions to protect
+            fine suede fibers.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Buying Guides -->
+  <section class="py-16 bg-zinc-50 dark:bg-charcoal-950 border-t border-black/5 dark:border-white/5 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-gold-500 uppercase tracking-widest text-xs font-bold block mb-3">FIT & WIDTH</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-charcoal-900 dark:text-white">Footwear Buying Guides</h2>
+      </div>
+
+      <div
+        class="bg-white dark:bg-charcoal-900 rounded-3xl p-8 border border-gray-100 dark:border-white/5 flex flex-col md:flex-row gap-8 items-center">
+        <div class="w-16 h-16 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500 shrink-0"><i
+            data-lucide="book-open" class="w-8 h-8"></i></div>
+        <div class="space-y-2">
+          <h4 class="font-bold text-base text-charcoal-900 dark:text-white">Choosing Between US, UK, and European Sizing
+            Scales</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            Sizing differs significantly. An EU 42 oxford fits narrow compared to a sports trainer. Read our standard
+            converter guide to select the right fit based on foot tracing measurements.
+          </p>
+          <button
+            class="open-size-guide-btn text-gold-500 hover:text-gold-600 transition-colors text-xs font-bold flex items-center gap-1"><span>Open
+              Size Tool</span> <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Sports Footwear Tips & Seasonal Styling Tips -->
+  <section class="py-16 bg-white dark:bg-charcoal-900 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Sports Tips -->
+        <div class="space-y-4">
+          <span class="text-gold-500 text-xs font-bold uppercase tracking-widest block">SPORTS TIPS</span>
+          <h3 class="text-xl font-bold text-charcoal-900 dark:text-white">Carbon Plates in Track Footwear: Benefits vs.
+            Risks</h3>
+          <div class="h-48 rounded-xl overflow-hidden mb-4 zoom-img-container">
+            <img src="https://images.pexels.com/photos/4065511/pexels-photo-4065511.jpeg"
+              alt="Sports athletic running shoe" class="w-full h-full object-cover">
+          </div>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            Carbon fiber plates return energy but add stiffness. Combine them with high-stack PEBA foam pads to preserve
+            knees during running routines.
+          </p>
+        </div>
+
+        <!-- Seasonal Style Tips -->
+        <div class="space-y-4">
+          <span class="text-gold-500 text-xs font-bold uppercase tracking-widest block">SEASONAL STYLING</span>
+          <h3 class="text-xl font-bold text-charcoal-900 dark:text-white">Transitioning Footwear Styles from Autumn to
+            Winter</h3>
+          <div class="h-48 rounded-xl overflow-hidden mb-4 zoom-img-container">
+            <img src="https://images.pexels.com/photos/28148123/pexels-photo-28148123.jpeg" alt="Winter boots style"
+              class="w-full h-full object-cover">
+          </div>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            Trade mesh slip-ons for ankle-high heavy chelsea boots. Choose warm shearling interiors and vibram grips to
+            resist winter sleet safely.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: Blog Categories -->
+  <section class="py-12 bg-zinc-50 dark:bg-charcoal-950 border-t border-black/5 dark:border-white/5 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <h4 class="font-bold text-xs uppercase tracking-wider text-charcoal-900 dark:text-white">Blog Categories</h4>
+      <div class="flex flex-wrap items-center justify-center gap-3 text-xs">
+        <a href="#"
+          class="px-4 py-2 bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-full hover:border-gold-500 text-gray-500 dark:text-gray-300 font-bold transition-all">Fashion
+          Trends</a>
+        <a href="#"
+          class="px-4 py-2 bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-full hover:border-gold-500 text-gray-500 dark:text-gray-300 font-bold transition-all">Shoe
+          Maintenance</a>
+        <a href="#"
+          class="px-4 py-2 bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-full hover:border-gold-500 text-gray-500 dark:text-gray-300 font-bold transition-all">Buying
+          Guides</a>
+        <a href="#"
+          class="px-4 py-2 bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-full hover:border-gold-500 text-gray-500 dark:text-gray-300 font-bold transition-all">Sports
+          Performance</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: Pagination -->
+  <section class="py-12 bg-white dark:bg-charcoal-900 border-t border-gray-100 dark:border-white/5 w-full overflow-hidden">
+    <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse text-xs font-semibold">
+      <button
+        class="px-4 py-2 border border-gray-200 dark:border-white/10 hover:border-gold-500 rounded-lg text-gray-500">Prev</button>
+      <button class="px-4 py-2 bg-gold-500 text-charcoal-950 rounded-lg font-bold">1</button>
+      <button
+        class="px-4 py-2 border border-gray-200 dark:border-white/10 hover:border-gold-500 rounded-lg text-gray-500">2</button>
+      <button
+        class="px-4 py-2 border border-gray-200 dark:border-white/10 hover:border-gold-500 rounded-lg text-gray-500">Next</button>
+    </div>
+  </section>
+
+  <!-- SECTION 8: Newsletter CTA -->
+  <section class="py-20 bg-charcoal-950 text-white border-t border-white/5 text-center w-full overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 space-y-6">
+      <h2 class="text-2xl sm:text-4xl font-bold luxury-text">SUBSCRIBE TO SOLE Insights</h2>
+      <p class="text-xs text-gray-400 max-w-md mx-auto">Get monthly digests, leather restoration logs, and seasonal
+        lookbooks directly in your mailbox.</p>
+      <form class="newsletter-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" placeholder="Business email address" required
+          class="w-full px-5 py-3 rounded-full bg-white/5 border border-white/10 text-sm focus:outline-none focus:border-gold-500 text-white">
+        <button type="submit"
+          class="w-full sm:w-auto px-6 py-3 bg-gold-500 hover:bg-gold-600 text-charcoal-950 font-bold rounded-full text-sm">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer
+    class="bg-zinc-100 dark:bg-charcoal-950 text-gray-600 dark:text-gray-400 pt-20 pb-10 border-t border-gray-200 dark:border-white/5 font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+
+        <!-- Box 1: Brand -->
+        <div class="lg:col-span-2 space-y-6">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
+            <svg class="w-8 h-8 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M12 2c0 5.523 4.477 10 10 10-5.523 0-10 4.477-10 10 0-5.523-4.477-10-10-10 5.523 0 10-4.477 10-10z"
+                fill="currentColor" fill-opacity="0.1" />
+              <path d="M12 8l4 4-4 4-4-4 4-4z" fill="currentColor" />
+            </svg>
+            <span class="text-2xl font-bold tracking-widest text-gold-500 luxury-text">
+              SOLE.
+            </span>
+          </a>
+          <p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400 max-w-sm">
+            SOLE defines the pinnacle of luxury and comfort in footwear. Handcrafting bespoke leather formal shoes,
+            modern urban sneakers, and high-performance sports footwear.
+          </p>
+          <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <p class="flex items-center space-x-2 rtl:space-x-reverse">
+              <i data-lucide="map-pin" class="w-4 h-4 text-gold-500"></i>
+              <span>742 Luxury Boulevard, Fashion District, NY</span>
+            </p>
+            <p class="flex items-center space-x-2 rtl:space-x-reverse">
+              <i data-lucide="phone" class="w-4 h-4 text-gold-500"></i>
+              <span>+1 (800) 234-5678</span>
+            </p>
+            <p class="flex items-center space-x-2 rtl:space-x-reverse">
+              <i data-lucide="clock" class="w-4 h-4 text-gold-500"></i>
+              <span>Mon - Sat: 9:00 AM - 9:00 PM | Sun: Closed</span>
+            </p>
+          </div>
+          <div class="flex space-x-4 rtl:space-x-reverse">
+            <a href="#"
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#"
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#"
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#"
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+        </div>
+
+        <!-- Box 2: Quick Links & Categories -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-semibold tracking-wider text-charcoal-900 dark:text-white uppercase">Categories</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="shop.html?category=Casual" class="hover:text-gold-500 transition-colors">Casual Shoes</a></li>
+            <li><a href="shop.html?category=Formal" class="hover:text-gold-500 transition-colors">Formal Shoes</a></li>
+            <li><a href="shop.html?category=Sports" class="hover:text-gold-500 transition-colors">Sports Shoes</a></li>
+            <li><a href="shop.html?category=Sneakers" class="hover:text-gold-500 transition-colors">Urban Sneakers</a>
+            </li>
+            <li><a href="shop.html?category=Kids" class="hover:text-gold-500 transition-colors">Kids Footwear</a></li>
+            <li><a href="shop.html?category=Premium" class="hover:text-gold-500 transition-colors">Premium
+                Collections</a></li>
+          </ul>
+        </div>
+
+        <!-- Box 3: Services -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-semibold tracking-wider text-charcoal-900 dark:text-white uppercase">Customer Services
+          </h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="open-size-guide-btn hover:text-gold-500 transition-colors">Size Guide &
+                Conversions</a></li>
+            <li><a href="about.html" class="hover:text-gold-500 transition-colors">Shipping & Delivery Info</a></li>
+            <li><a href="about.html" class="hover:text-gold-500 transition-colors">Return & Refund Policy</a></li>
+            <li><a href="contact.html#faq-section" class="hover:text-gold-500 transition-colors">Frequently Asked
+                Questions</a></li>
+            <li><a href="contact.html" class="hover:text-gold-500 transition-colors">Bulk Order Inquiry</a></li>
+            <li><a href="about.html" class="hover:text-gold-500 transition-colors">Why Customers Trust Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Box 4: Newsletter -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-semibold tracking-wider text-charcoal-900 dark:text-white uppercase">Newsletter</h4>
+          <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+            Subscribe to our luxury circle to receive early drops, style advice, and private sale codes.
+          </p>
+          <form class="newsletter-form flex flex-col space-y-2">
+            <input type="email" placeholder="Your luxury email..." required
+              class="px-4 py-3 rounded-lg bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-charcoal-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-gold-500 text-sm w-full transition-all">
+            <button type="submit"
+              class="px-4 py-3 rounded-lg bg-gold-500 hover:bg-gold-600 text-charcoal-950 font-bold transition-all text-sm w-full">
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div
+        class="pt-8 border-t border-gray-200 dark:border-white/5 text-center md:flex md:justify-between md:items-center text-xs text-gray-500">
+        <p>&copy; 2026 SOLE Footwear Group. All luxury rights reserved.</p>
+        <div class="mt-4 md:mt-0 space-x-4 rtl:space-x-reverse">
+          <a href="#" class="hover:text-gold-500">Privacy Policy</a>
+          <a href="#" class="hover:text-gold-500">Terms of Service</a>
+          <a href="#" class="hover:text-gold-500">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Size Guide Modal -->
+  <div id="size-guide-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
+    <div
+      class="relative w-full max-w-4xl bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/10 rounded-2xl shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto animate-fade-in-up text-charcoal-900 dark:text-white">
+      <div class="flex items-center justify-between mb-6 pb-4 border-b border-gray-100 dark:border-white/10">
+        <h3 class="text-2xl font-bold luxury-text">SIZE GUIDE & CONVERSIONS</h3>
+        <button
+          class="close-size-guide-btn p-2 rounded-full hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-colors">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="space-y-8 text-sm">
+        <div>
+          <p class="text-gray-600 dark:text-gray-400">
+            Find your perfect fit. Compare international sizing or use our simple measurement guide below. Feel free to
+            contact our footwear specialists if you require further styling assistance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="space-y-3">
+            <h4 class="font-bold text-gold-500 uppercase tracking-wider">Men's Size Chart</h4>
+            <div class="overflow-x-auto border border-gray-100 dark:border-white/10 rounded-lg">
+              <table class="w-full text-left rtl:text-right text-xs">
+                <thead class="bg-gray-50 dark:bg-charcoal-800 text-gray-700 dark:text-gray-300">
+                  <tr>
+                    <th class="p-3">US</th>
+                    <th class="p-3">UK</th>
+                    <th class="p-3">EU</th>
+                    <th class="p-3">CM</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 dark:divide-white/10">
+                  <tr>
+                    <td class="p-3 font-semibold">8</td>
+                    <td class="p-3">7</td>
+                    <td class="p-3">41</td>
+                    <td class="p-3">26.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">9</td>
+                    <td class="p-3">8</td>
+                    <td class="p-3">42</td>
+                    <td class="p-3">27.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">10</td>
+                    <td class="p-3">9</td>
+                    <td class="p-3">43</td>
+                    <td class="p-3">28.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">11</td>
+                    <td class="p-3">10</td>
+                    <td class="p-3">44.5</td>
+                    <td class="p-3">29.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">12</td>
+                    <td class="p-3">11</td>
+                    <td class="p-3">46</td>
+                    <td class="p-3">30.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="font-bold text-gold-500 uppercase tracking-wider">Women's Size Chart</h4>
+            <div class="overflow-x-auto border border-gray-100 dark:border-white/10 rounded-lg">
+              <table class="w-full text-left rtl:text-right text-xs">
+                <thead class="bg-gray-50 dark:bg-charcoal-800 text-gray-700 dark:text-gray-300">
+                  <tr>
+                    <th class="p-3">US</th>
+                    <th class="p-3">UK</th>
+                    <th class="p-3">EU</th>
+                    <th class="p-3">CM</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 dark:divide-white/10">
+                  <tr>
+                    <td class="p-3 font-semibold">6</td>
+                    <td class="p-3">4</td>
+                    <td class="p-3">37</td>
+                    <td class="p-3">23.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">7</td>
+                    <td class="p-3">5</td>
+                    <td class="p-3">38</td>
+                    <td class="p-3">24.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">8</td>
+                    <td class="p-3">6</td>
+                    <td class="p-3">39</td>
+                    <td class="p-3">25.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">9</td>
+                    <td class="p-3">7</td>
+                    <td class="p-3">40</td>
+                    <td class="p-3">26.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">10</td>
+                    <td class="p-3">8</td>
+                    <td class="p-3">41</td>
+                    <td class="p-3">27.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="font-bold text-gold-500 uppercase tracking-wider">Kids' Size Chart</h4>
+            <div class="overflow-x-auto border border-gray-100 dark:border-white/10 rounded-lg">
+              <table class="w-full text-left rtl:text-right text-xs">
+                <thead class="bg-gray-50 dark:bg-charcoal-800 text-gray-700 dark:text-gray-300">
+                  <tr>
+                    <th class="p-3">US Youth</th>
+                    <th class="p-3">UK</th>
+                    <th class="p-3">EU</th>
+                    <th class="p-3">CM</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 dark:divide-white/10">
+                  <tr>
+                    <td class="p-3 font-semibold">1Y</td>
+                    <td class="p-3">13.5</td>
+                    <td class="p-3">32</td>
+                    <td class="p-3">20.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">2Y</td>
+                    <td class="p-3">1.5</td>
+                    <td class="p-3">33.5</td>
+                    <td class="p-3">21.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">3Y</td>
+                    <td class="p-3">2.5</td>
+                    <td class="p-3">35</td>
+                    <td class="p-3">22.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">4Y</td>
+                    <td class="p-3">3.5</td>
+                    <td class="p-3">36</td>
+                    <td class="p-3">23.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h4 class="font-bold text-gold-500 uppercase tracking-wider">How to Measure Your Feet</h4>
+            <div class="space-y-2 text-xs text-gray-600 dark:text-gray-400">
+              <p><strong>Step 1:</strong> Tape a piece of paper flat to the floor against a solid wall.</p>
+              <p><strong>Step 2:</strong> Stand on the paper with your heel firmly touching the wall.</p>
+              <p><strong>Step 3:</strong> Draw a line at the longest part of your foot (usually your big toe).</p>
+              <p><strong>Step 4:</strong> Use a ruler to measure the distance in centimeters, then look up your size on
+                our conversion charts.</p>
+              <p class="mt-2 text-gold-500 font-semibold flex items-center space-x-1"><i data-lucide="sparkles"
+                  class="w-3.5 h-3.5"></i> <span>Fit Recommendation: If between sizes, order a half-size larger.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- Global App Script -->
+  <script src="app.js"></script>
+</body>
+
+</html>

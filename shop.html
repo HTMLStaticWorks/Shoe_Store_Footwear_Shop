@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOLE | Shop Premium Footwear</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c5a880' stroke-width='1.5'%3E%3Cpath d='M12 2c0 5.523 4.477 10 10 10-5.523 0-10 4.477-10 10 0-5.523-4.477-10-10-10 5.523 0 10-4.477 10-10z' fill='%23c5a880' fill-opacity='0.1'/%3E%3Cpath d='M12 8l4 4-4 4-4-4 4-4z' fill='%23c5a880'/%3E%3C/svg%3E">
+  <meta name="description"
+    content="Shop SOLE luxury shoe collections. Search and filter through casual, formal, sports, sneakers, and kids styles with size conversion indicators.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SOLE | Shop Premium Footwear">
+  <meta property="og:description"
+    content="Browse handcrafted premium collections with our interactive size and style filters.">
+  <meta property="og:type" content="website">
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              50: '#fbf8f3',
+              100: '#f5edd9',
+              200: '#ebdcb3',
+              300: '#dec283',
+              400: '#cfa252',
+              500: '#c5a880',
+              600: '#b08432',
+              700: '#946626',
+              800: '#7a511f',
+              900: '#64411a',
+            },
+            charcoal: {
+              50: '#f4f4f5',
+              100: '#e4e4e7',
+              800: '#1b1b1f',
+              900: '#111115',
+              950: '#0a0a0c',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Main Style Sheet -->
+  <link rel="stylesheet" href="style.css?v=1.2">
+</head>
+
+<body class="bg-charcoal-50 dark:bg-charcoal-950 text-charcoal-900 dark:text-zinc-100 transition-colors duration-300">
+
+  <!-- HEADER -->
+  <header
+    class="fixed top-0 left-0 right-0 z-40 bg-white/95 dark:bg-charcoal-950/95 backdrop-blur-md border-b border-gray-200/50 dark:border-white/10 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
+          <svg class="w-8 h-8 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2c0 5.523 4.477 10 10 10-5.523 0-10 4.477-10 10 0-5.523-4.477-10-10-10 5.523 0 10-4.477 10-10z"
+              fill="currentColor" fill-opacity="0.1" />
+            <path d="M12 8l4 4-4 4-4-4 4-4z" fill="currentColor" />
+          </svg>
+          <span class="text-2xl font-bold tracking-widest luxury-text text-gold-500">
+            SOLE.
+          </span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden lg:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-charcoal-900 dark:text-gray-300">
+          <a href="index.html" class="hover:text-gold-500 transition-colors">Home 1</a>
+          <a href="home2.html" class="hover:text-gold-500 transition-colors">Home 2</a>
+          <a href="shop.html" class="text-gold-500 font-bold transition-colors">Shop</a>
+          <a href="about.html" class="hover:text-gold-500 transition-colors">About Us</a>
+          <a href="blog.html" class="hover:text-gold-500 transition-colors">Blog</a>
+          <a href="contact.html" class="hover:text-gold-500 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Desktop Actions -->
+        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+          <button
+            class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/30 hover:bg-gold-500/10 text-gold-500 font-bold text-xs transition-all duration-300 shrink-0">
+            <span class="rtl-btn-text">RTL</span>
+          </button>
+          <button
+            class="theme-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gray-200 dark:border-white/10 text-charcoal-900 dark:text-gray-300 hover:text-gold-500 dark:hover:text-gold-500 transition-colors shrink-0">
+            <span class="theme-icon"></span>
+          </button>
+          <a href="signup.html"
+            class="px-5 py-2 bg-charcoal-950 hover:bg-gold-500 dark:bg-gold-500 dark:hover:bg-gold-600 dark:text-charcoal-950 text-white font-semibold text-sm rounded-full transition-all duration-300 shadow-md">Sign
+            Up</a>
+        </div>
+
+        <!-- Mobile Controls (Hamburger) -->
+        <div class="flex items-center space-x-3 rtl:space-x-reverse lg:hidden">
+          <button id="mobile-menu-btn"
+            class="w-9 h-9 rounded-full flex items-center justify-center text-charcoal-900 dark:text-white hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-all duration-300 shrink-0">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black z-45 hidden opacity-0 transition-opacity duration-300">
+  </div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-nav-drawer"
+    class="fixed top-0 right-0 bottom-0 z-50 w-80 bg-white dark:bg-charcoal-900 shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col justify-between invisible">
+    <div>
+      <div class="flex items-center justify-between mb-8">
+        <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
+          <svg class="w-8 h-8 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2c0 5.523 4.477 10 10 10-5.523 0-10 4.477-10 10 0-5.523-4.477-10-10-10 5.523 0 10-4.477 10-10z"
+              fill="currentColor" fill-opacity="0.1" />
+            <path d="M12 8l4 4-4 4-4-4 4-4z" fill="currentColor" />
+          </svg>
+          <span class="text-2xl font-bold tracking-widest luxury-text text-gold-500">
+            SOLE.
+          </span>
+        </a>
+        <button id="close-mobile-menu-btn"
+          class="p-2 text-charcoal-900 dark:text-white rounded-full hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-colors">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="space-y-4">
+        <a href="index.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 1</a>
+        <a href="home2.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 2</a>
+        <a href="shop.html" class="block text-lg font-bold text-gold-500 py-2">Shop</a>
+        <a href="about.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">About Us</a>
+        <a href="blog.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Blog</a>
+        <a href="contact.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Contact</a>
+      </nav>
+    </div>
+
+    <div class="space-y-4 border-t border-gray-100 dark:border-white/10 pt-6">
+      <div class="flex items-center justify-center space-x-4 mb-4 rtl:space-x-reverse">
+        <button
+          class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/30 hover:bg-gold-500/10 text-gold-500 font-bold text-xs transition-all duration-300 shrink-0">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+        <button
+          class="theme-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gray-200 dark:border-white/10 text-charcoal-900 dark:text-gray-300 hover:text-gold-500 dark:hover:text-gold-500 transition-colors shrink-0">
+          <span class="theme-icon"></span>
+        </button>
+      </div>
+      <a href="signup.html"
+        class="block text-center py-3 bg-gold-500 text-charcoal-950 font-bold rounded-xl hover:bg-gold-600 transition-colors">Sign
+        Up</a>
+    </div>
+  </div>
+
+  <!-- Shop Hero Banner -->
+  <section class="relative bg-zinc-950 py-20 text-center text-white overflow-hidden w-full">
+    <div class="absolute inset-0 opacity-15">
+      <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&q=80&w=1200"
+        alt="Shop catalog banner" class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 mt-8">
+      <span class="text-gold-500 uppercase tracking-widest text-xs font-bold block mb-2">COMPLETE CATALOG</span>
+      <h1 class="text-3xl sm:text-5xl font-black luxury-text">Browse Luxury Footwear</h1>
+    </div>
+  </section>
+
+  <!-- Shop Filtering System & Grid -->
+  <section class="py-12 bg-white dark:bg-charcoal-900 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Top Bar: Search & Mobile Filter Toggle -->
+      <div
+        class="flex flex-col md:flex-row gap-4 justify-between items-center mb-8 border-b border-gray-100 dark:border-white/5 pb-6">
+        <!-- Search -->
+        <div class="relative w-full md:max-w-md">
+          <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+            <i data-lucide="search" class="w-4 h-4"></i>
+          </span>
+          <input type="text" id="search-input" placeholder="Search product name, brand..."
+            class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-transparent text-sm focus:outline-none focus:border-gold-500 placeholder-gray-400">
+        </div>
+        <!-- Mobile Filter Toggle / Results Count -->
+        <div class="flex items-center justify-between w-full md:w-auto gap-4">
+          <span class="text-xs text-gray-500 dark:text-gray-400 font-semibold" id="results-count">Showing 12
+            items</span>
+          <button id="mobile-filter-btn"
+            class="md:hidden flex items-center space-x-2 px-4 py-2 border border-gold-500/20 text-gold-500 hover:bg-gold-500/10 rounded-lg text-xs font-bold transition-all">
+            <i data-lucide="sliders-horizontal" class="w-4 h-4"></i>
+            <span>Filters</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+        <!-- Left Column: Filter Sidebar (Desktop) -->
+        <aside id="filter-sidebar" class="hidden lg:block lg:col-span-1 space-y-8 pr-4">
+
+          <!-- Category Filter -->
+          <div>
+            <h4 class="font-bold text-xs uppercase tracking-wider text-charcoal-900 dark:text-white mb-3">Categories
+            </h4>
+            <div class="space-y-2 text-sm text-gray-500 dark:text-gray-400" id="category-filters-container">
+              <!-- Rendered JS category filters -->
+            </div>
+          </div>
+
+          <!-- Brand Filter -->
+          <div>
+            <h4 class="font-bold text-xs uppercase tracking-wider text-charcoal-900 dark:text-white mb-3">Featured
+              Brands</h4>
+            <div class="space-y-2 text-sm text-gray-500 dark:text-gray-400" id="brand-filters-container">
+              <!-- Rendered JS brand filters -->
+            </div>
+          </div>
+
+          <!-- Sizes Filter -->
+          <div>
+            <h4 class="font-bold text-xs uppercase tracking-wider text-charcoal-900 dark:text-white mb-3">Size</h4>
+            <div class="grid grid-cols-4 gap-2 text-xs" id="size-filters-container">
+              <!-- Rendered JS size buttons -->
+            </div>
+          </div>
+
+          <!-- Price Range Filter -->
+          <div>
+            <h4 class="font-bold text-xs uppercase tracking-wider text-charcoal-900 dark:text-white mb-3">Max Price</h4>
+            <div class="space-y-2">
+              <input type="range" id="price-range" min="50" max="500" value="500"
+                class="w-full accent-gold-500 bg-gray-200 dark:bg-charcoal-800 h-1.5 rounded-lg appearance-none cursor-pointer">
+              <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 font-semibold">
+                <span>$50</span>
+                <span id="price-range-val">$500</span>
+              </div>
+            </div>
+          </div>
+
+          <button id="clear-filters-btn"
+            class="w-full py-3 border border-red-500/20 text-red-500 hover:bg-red-500/10 rounded-xl text-xs font-bold transition-all">Clear
+            Filters</button>
+
+        </aside>
+
+        <!-- Right Column: Product Cards Grid -->
+        <main class="lg:col-span-3">
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8" id="products-grid">
+            <!-- Dynamic JS render products -->
+          </div>
+          <!-- Empty state -->
+          <div id="empty-state" class="hidden text-center py-20 text-gray-500 space-y-3">
+            <i data-lucide="package-open" class="w-12 h-12 text-gold-500 mx-auto"></i>
+            <h3 class="text-lg font-bold">No Products Found</h3>
+            <p class="text-xs">Adjust your search parameters or price ranges to reveal more footwear.</p>
+          </div>
+        </main>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STORE SERVICES & NEWSLETTER -->
+  <!-- Services -->
+  <section class="py-16 bg-zinc-50 dark:bg-charcoal-950 border-t border-black/5 dark:border-white/5 w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-sm text-gray-500">
+        <div class="space-y-3">
+          <div class="p-3 bg-gold-500/10 text-gold-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto">
+            <i data-lucide="badge-check" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-charcoal-900 dark:text-white">Authentic Materials</h4>
+          <p class="text-xs">Italian leather guilds check and certify every sole welt.</p>
+        </div>
+        <div class="space-y-3">
+          <div class="p-3 bg-gold-500/10 text-gold-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto">
+            <i data-lucide="headphones" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-charcoal-900 dark:text-white">Bespoke Concierge</h4>
+          <p class="text-xs">Custom sizing sizing adjustments and online video calls.</p>
+        </div>
+        <div class="space-y-3">
+          <div class="p-3 bg-gold-500/10 text-gold-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto">
+            <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-charcoal-900 dark:text-white">30-Day Free Swap</h4>
+          <p class="text-xs">Exchanges are painless, with prompt residential collections.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-20 bg-charcoal-950 text-white border-t border-white/5 w-full overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
+      <h2 class="text-2xl sm:text-4xl font-bold luxury-text">JOIN THE SOLE Circle</h2>
+      <p class="text-xs text-gray-400 leading-relaxed max-w-lg mx-auto">Subscribe for early releases, private access
+        codes, and design catalog updates.</p>
+      <form class="newsletter-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" placeholder="Business email address" required
+          class="w-full px-5 py-3 rounded-full bg-white/5 border border-white/10 text-sm focus:outline-none focus:border-gold-500 text-white placeholder-gray-500">
+        <button type="submit"
+          class="w-full sm:w-auto px-6 py-3 bg-gold-500 hover:bg-gold-600 text-charcoal-950 font-bold rounded-full text-sm">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer
+    class="bg-zinc-100 dark:bg-charcoal-950 text-gray-600 dark:text-gray-400 pt-20 pb-10 border-t border-gray-200 dark:border-white/5 font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+
+        <!-- Box 1: Brand -->
+        <div class="lg:col-span-2 space-y-6">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
+            <svg class="w-8 h-8 text-gold-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M12 2c0 5.523 4.477 10 10 10-5.523 0-10 4.477-10 10 0-5.523-4.477-10-10-10 5.523 0 10-4.477 10-10z"
+                fill="currentColor" fill-opacity="0.1" />
+              <path d="M12 8l4 4-4 4-4-4 4-4z" fill="currentColor" />
+            </svg>
+            <span class="text-2xl font-bold tracking-widest text-gold-500 luxury-text">
+              SOLE.
+            </span>
+          </a>
+          <p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400 max-w-sm">
+            SOLE defines the pinnacle of luxury and comfort in footwear. Handcrafting bespoke leather formal shoes,
+            modern urban sneakers, and high-performance sports footwear.
+          </p>
+          <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <p class="flex items-center space-x-2 rtl:space-x-reverse">
+              <i data-lucide="map-pin" class="w-4 h-4 text-gold-500"></i>
+              <span>742 Luxury Boulevard, Fashion District, NY</span>
+            </p>
+            <p class="flex items-center space-x-2 rtl:space-x-reverse">
+              <i data-lucide="phone" class="w-4 h-4 text-gold-500"></i>
+              <span>+1 (800) 234-5678</span>
+            </p>
+            <p class="flex items-center space-x-2 rtl:space-x-reverse">
+              <i data-lucide="clock" class="w-4 h-4 text-gold-500"></i>
+              <span>Mon - Sat: 9:00 AM - 9:00 PM | Sun: Closed</span>
+            </p>
+          </div>
+          <div class="flex space-x-4 rtl:space-x-reverse">
+            <a href="#"
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#"
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#"
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#"
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+        </div>
+
+        <!-- Box 2: Quick Links & Categories -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-semibold tracking-wider text-charcoal-900 dark:text-white uppercase">Categories</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="shop.html?category=Casual" class="hover:text-gold-500 transition-colors">Casual Shoes</a></li>
+            <li><a href="shop.html?category=Formal" class="hover:text-gold-500 transition-colors">Formal Shoes</a></li>
+            <li><a href="shop.html?category=Sports" class="hover:text-gold-500 transition-colors">Sports Shoes</a></li>
+            <li><a href="shop.html?category=Sneakers" class="hover:text-gold-500 transition-colors">Urban Sneakers</a>
+            </li>
+            <li><a href="shop.html?category=Kids" class="hover:text-gold-500 transition-colors">Kids Footwear</a></li>
+            <li><a href="shop.html?category=Premium" class="hover:text-gold-500 transition-colors">Premium
+                Collections</a></li>
+          </ul>
+        </div>
+
+        <!-- Box 3: Services -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-semibold tracking-wider text-charcoal-900 dark:text-white uppercase">Customer Services
+          </h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="open-size-guide-btn hover:text-gold-500 transition-colors">Size Guide &
+                Conversions</a></li>
+            <li><a href="about.html" class="hover:text-gold-500 transition-colors">Shipping & Delivery Info</a></li>
+            <li><a href="about.html" class="hover:text-gold-500 transition-colors">Return & Refund Policy</a></li>
+            <li><a href="contact.html#faq-section" class="hover:text-gold-500 transition-colors">Frequently Asked
+                Questions</a></li>
+            <li><a href="contact.html" class="hover:text-gold-500 transition-colors">Bulk Order Inquiry</a></li>
+            <li><a href="about.html" class="hover:text-gold-500 transition-colors">Why Customers Trust Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Box 4: Newsletter -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-semibold tracking-wider text-charcoal-900 dark:text-white uppercase">Newsletter</h4>
+          <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+            Subscribe to our luxury circle to receive early drops, style advice, and private sale codes.
+          </p>
+          <form class="newsletter-form flex flex-col space-y-2">
+            <input type="email" placeholder="Your luxury email..." required
+              class="px-4 py-3 rounded-lg bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-charcoal-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-gold-500 text-sm w-full transition-all">
+            <button type="submit"
+              class="px-4 py-3 rounded-lg bg-gold-500 hover:bg-gold-600 text-charcoal-950 font-bold transition-all text-sm w-full">
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div
+        class="pt-8 border-t border-gray-200 dark:border-white/5 text-center md:flex md:justify-between md:items-center text-xs text-gray-500">
+        <p>&copy; 2026 SOLE Footwear Group. All luxury rights reserved.</p>
+        <div class="mt-4 md:mt-0 space-x-4 rtl:space-x-reverse">
+          <a href="#" class="hover:text-gold-500">Privacy Policy</a>
+          <a href="#" class="hover:text-gold-500">Terms of Service</a>
+          <a href="#" class="hover:text-gold-500">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Size Guide Modal -->
+  <div id="size-guide-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
+    <div
+      class="relative w-full max-w-4xl bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/10 rounded-2xl shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto animate-fade-in-up text-charcoal-900 dark:text-white">
+      <div class="flex items-center justify-between mb-6 pb-4 border-b border-gray-100 dark:border-white/10">
+        <h3 class="text-2xl font-bold luxury-text">SIZE GUIDE & CONVERSIONS</h3>
+        <button
+          class="close-size-guide-btn p-2 rounded-full hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-colors">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="space-y-8 text-sm">
+        <div>
+          <p class="text-gray-600 dark:text-gray-400">
+            Find your perfect fit. Compare international sizing or use our simple measurement guide below. Feel free to
+            contact our footwear specialists if you require further styling assistance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="space-y-3">
+            <h4 class="font-bold text-gold-500 uppercase tracking-wider">Men's Size Chart</h4>
+            <div class="overflow-x-auto border border-gray-100 dark:border-white/10 rounded-lg">
+              <table class="w-full text-left rtl:text-right text-xs">
+                <thead class="bg-gray-50 dark:bg-charcoal-800 text-gray-700 dark:text-gray-300">
+                  <tr>
+                    <th class="p-3">US</th>
+                    <th class="p-3">UK</th>
+                    <th class="p-3">EU</th>
+                    <th class="p-3">CM</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 dark:divide-white/10">
+                  <tr>
+                    <td class="p-3 font-semibold">8</td>
+                    <td class="p-3">7</td>
+                    <td class="p-3">41</td>
+                    <td class="p-3">26.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">9</td>
+                    <td class="p-3">8</td>
+                    <td class="p-3">42</td>
+                    <td class="p-3">27.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">10</td>
+                    <td class="p-3">9</td>
+                    <td class="p-3">43</td>
+                    <td class="p-3">28.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">11</td>
+                    <td class="p-3">10</td>
+                    <td class="p-3">44.5</td>
+                    <td class="p-3">29.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">12</td>
+                    <td class="p-3">11</td>
+                    <td class="p-3">46</td>
+                    <td class="p-3">30.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="font-bold text-gold-500 uppercase tracking-wider">Women's Size Chart</h4>
+            <div class="overflow-x-auto border border-gray-100 dark:border-white/10 rounded-lg">
+              <table class="w-full text-left rtl:text-right text-xs">
+                <thead class="bg-gray-50 dark:bg-charcoal-800 text-gray-700 dark:text-gray-300">
+                  <tr>
+                    <th class="p-3">US</th>
+                    <th class="p-3">UK</th>
+                    <th class="p-3">EU</th>
+                    <th class="p-3">CM</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 dark:divide-white/10">
+                  <tr>
+                    <td class="p-3 font-semibold">6</td>
+                    <td class="p-3">4</td>
+                    <td class="p-3">37</td>
+                    <td class="p-3">23.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">7</td>
+                    <td class="p-3">5</td>
+                    <td class="p-3">38</td>
+                    <td class="p-3">24.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">8</td>
+                    <td class="p-3">6</td>
+                    <td class="p-3">39</td>
+                    <td class="p-3">25.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">9</td>
+                    <td class="p-3">7</td>
+                    <td class="p-3">40</td>
+                    <td class="p-3">26.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">10</td>
+                    <td class="p-3">8</td>
+                    <td class="p-3">41</td>
+                    <td class="p-3">27.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="font-bold text-gold-500 uppercase tracking-wider">Kids' Size Chart</h4>
+            <div class="overflow-x-auto border border-gray-100 dark:border-white/10 rounded-lg">
+              <table class="w-full text-left rtl:text-right text-xs">
+                <thead class="bg-gray-50 dark:bg-charcoal-800 text-gray-700 dark:text-gray-300">
+                  <tr>
+                    <th class="p-3">US Youth</th>
+                    <th class="p-3">UK</th>
+                    <th class="p-3">EU</th>
+                    <th class="p-3">CM</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 dark:divide-white/10">
+                  <tr>
+                    <td class="p-3 font-semibold">1Y</td>
+                    <td class="p-3">13.5</td>
+                    <td class="p-3">32</td>
+                    <td class="p-3">20.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">2Y</td>
+                    <td class="p-3">1.5</td>
+                    <td class="p-3">33.5</td>
+                    <td class="p-3">21.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">3Y</td>
+                    <td class="p-3">2.5</td>
+                    <td class="p-3">35</td>
+                    <td class="p-3">22.0</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold">4Y</td>
+                    <td class="p-3">3.5</td>
+                    <td class="p-3">36</td>
+                    <td class="p-3">23.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h4 class="font-bold text-gold-500 uppercase tracking-wider">How to Measure Your Feet</h4>
+            <div class="space-y-2 text-xs text-gray-600 dark:text-gray-400">
+              <p><strong>Step 1:</strong> Tape a piece of paper flat to the floor against a solid wall.</p>
+              <p><strong>Step 2:</strong> Stand on the paper with your heel firmly touching the wall.</p>
+              <p><strong>Step 3:</strong> Draw a line at the longest part of your foot (usually your big toe).</p>
+              <p><strong>Step 4:</strong> Use a ruler to measure the distance in centimeters, then look up your size on
+                our conversion charts.</p>
+              <p class="mt-2 text-gold-500 font-semibold flex items-center space-x-1"><i data-lucide="sparkles"
+                  class="w-3.5 h-3.5"></i> <span>Fit Recommendation: If between sizes, order a half-size larger.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Filter Modal Drawer (HTML/JS setup) -->
+  <div id="mobile-filter-overlay"
+    class="fixed inset-0 bg-black/60 z-45 hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="mobile-filter-drawer"
+    class="fixed top-0 bottom-0 left-0 z-50 w-80 bg-white dark:bg-charcoal-900 shadow-2xl p-6 transform -translate-x-full transition-transform duration-300 overflow-y-auto invisible">
+    <div class="flex items-center justify-between mb-6">
+      <h3 class="font-bold tracking-widest text-lg luxury-text">FILTERS</h3>
+      <button id="close-mobile-filter-btn"
+        class="p-2 text-charcoal-900 dark:text-white rounded-full hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-colors">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <div id="mobile-filters-placeholder" class="space-y-8">
+      <!-- Portal filters here dynamically -->
+    </div>
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- Global App Script -->
+  <script src="app.js"></script>
+
+  <!-- Interactive Filtering Script -->
+  <script>
+    const PRODUCTS = [
+      { id: 1, name: "Velocita Carbon Runner", brand: "Steps Athletics", category: "Sports", sizes: ["8", "9", "10", "11"], price: 240, rating: 4.9, img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=600", desc: "Carbon-plated performance racer designed for marathon speed records.", collection: ["New Arrivals", "Sports Collection"] },
+      { id: 2, name: "Classic Oxford Brogue", brand: "SOLE Italy", category: "Formal", sizes: ["8", "9", "10", "11", "12"], price: 349, rating: 5.0, img: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&q=80&w=600", desc: "Hand-dyed full-grain Italian leather classic brogues.", collection: ["New Arrivals", "Premium Collection"] },
+      { id: 3, name: "Monaco Suede Loafer", brand: "SOLE Italy", category: "Casual", sizes: ["8", "9", "10"], price: 210, rating: 4.7, img: "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&q=80&w=600", desc: "Fine slip-on loafers in premium Tuscan beige suede.", collection: ["Best Sellers"] },
+      { id: 4, name: "Vapor Wave Run v2", brand: "Steps Athletics", category: "Sports", sizes: ["9", "10", "11"], price: 175, rating: 4.8, img: "https://images.pexels.com/photos/11220655/pexels-photo-11220655.jpeg", desc: "High elastic foam runner with lightweight mesh upper.", collection: ["Best Sellers", "Sports Collection"] },
+      { id: 5, name: "Retro Urban Sneaker", brand: "Monarch Lthr", category: "Sneakers", sizes: ["8", "9", "10", "11"], price: 189, rating: 4.8, img: "https://images.pexels.com/photos/38786817/pexels-photo-38786817.jpeg", desc: "Vintage-inspired urban wear with calfskin side stripes.", collection: ["New Arrivals", "Trending Collection"] },
+      { id: 6, name: "Elite Low Sneaker", brand: "Monarch Lthr", category: "Sneakers", sizes: ["8", "9", "10", "11"], price: 220, rating: 4.9, img: "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&q=80&w=600", desc: "Gold details and luxury stitching on premium white sneakers.", collection: ["Best Sellers"] },
+      { id: 7, name: "Bespoke Monk Strap", brand: "SOLE Italy", category: "Formal", sizes: ["8", "9", "10", "11"], price: 380, rating: 5.0, img: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&q=80&w=600", desc: "Elegant double monk strap dress shoes with brass buckle details.", collection: ["Best Sellers", "Premium Collection"] },
+      { id: 8, name: "Summer Canvas Slip", brand: "Monarch Lthr", category: "Casual", sizes: ["8", "9", "10"], price: 120, rating: 4.5, img: "https://images.pexels.com/photos/8159478/pexels-photo-8159478.jpeg", desc: "Breathable organic canvas loafer with rope-wrapped midsoles.", collection: ["Seasonal Collection (Summer)"] },
+      { id: 9, name: "Lil' Steps Trainer", brand: "Steps Athletics", category: "Kids", sizes: ["1Y", "2Y", "3Y", "4Y"], price: 85, rating: 4.6, img: "https://images.pexels.com/photos/9537104/pexels-photo-9537104.jpeg", desc: "High comfort durable school/play sneakers for children.", collection: ["Kids Footwear", "School Collection"] },
+      { id: 10, name: "Autumn Winter Hiker", brand: "Kinetic Grip", category: "Sports", sizes: ["8", "9", "10", "11", "12"], price: 260, rating: 4.9, img: "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&q=80&w=600", desc: "Heavily insulated hiking boot with deep rubber tread grips.", collection: ["Seasonal Collection (Winter)"] },
+      { id: 11, name: "Empress Gold Heel", brand: "SOLE Italy", category: "Formal", sizes: ["6", "7", "8", "9"], price: 395, rating: 4.9, img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=600", desc: "Fine golden buckle detail formal dress shoes.", collection: ["Premium Collection"] },
+      { id: 12, name: "Monsoon Waterproof Pro", brand: "Kinetic Grip", category: "Sports", sizes: ["9", "10", "11"], price: 195, rating: 4.7, img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=600", desc: "Waterproof trail shoe designed to keep feet dry in intense wet conditions.", collection: ["Seasonal Collection (Monsoon)"] }
+    ];
+
+    // Filter states
+    let activeCategories = [];
+    let activeBrands = [];
+    let activeSizes = [];
+    let maxPrice = 500;
+    let searchQuery = "";
+
+    // Init UI
+    const searchInput = document.getElementById('search-input');
+    const priceRange = document.getElementById('price-range');
+    const priceRangeVal = document.getElementById('price-range-val');
+    const productsGrid = document.getElementById('products-grid');
+    const emptyState = document.getElementById('empty-state');
+    const resultsCount = document.getElementById('results-count');
+    const clearFiltersBtn = document.getElementById('clear-filters-btn');
+
+    // Mobile filter references
+    const mobileFilterBtn = document.getElementById('mobile-filter-btn');
+    const mobileFilterOverlay = document.getElementById('mobile-filter-overlay');
+    const mobileFilterDrawer = document.getElementById('mobile-filter-drawer');
+    const closeMobileFilterBtn = document.getElementById('close-mobile-filter-btn');
+    const mobileFiltersPlaceholder = document.getElementById('mobile-filters-placeholder');
+    const filterSidebar = document.getElementById('filter-sidebar');
+
+    function initFilters() {
+      // 1. Render Categories
+      const categories = [...new Set(PRODUCTS.map(p => p.category))];
+      const catContainer = document.getElementById('category-filters-container');
+      catContainer.innerHTML = categories.map(cat => `
+        <label class="flex items-center space-x-2 rtl:space-x-reverse cursor-pointer py-1">
+          <input type="checkbox" value="${cat}" class="category-checkbox rounded text-gold-500 focus:ring-gold-500 w-4 h-4 bg-transparent border-gray-300 dark:border-white/10">
+          <span>${cat}</span>
+        </label>
+      `).join('');
+
+      // 2. Render Brands
+      const brands = [...new Set(PRODUCTS.map(p => p.brand))];
+      const brandContainer = document.getElementById('brand-filters-container');
+      brandContainer.innerHTML = brands.map(b => `
+        <label class="flex items-center space-x-2 rtl:space-x-reverse cursor-pointer py-1">
+          <input type="checkbox" value="${b}" class="brand-checkbox rounded text-gold-500 focus:ring-gold-500 w-4 h-4 bg-transparent border-gray-300 dark:border-white/10">
+          <span>${b}</span>
+        </label>
+      `).join('');
+
+      // 3. Render Sizes
+      const allSizes = [...new Set(PRODUCTS.flatMap(p => p.sizes))].sort((a, b) => parseFloat(a) - parseFloat(b));
+      const sizeContainer = document.getElementById('size-filters-container');
+      sizeContainer.innerHTML = allSizes.map(sz => `
+        <button value="${sz}" class="size-btn px-2 py-2 border border-gray-200 dark:border-white/10 hover:border-gold-500 rounded-lg text-center font-medium transition-all focus:outline-none bg-transparent">${sz}</button>
+      `).join('');
+
+      // Port filter elements to mobile drawer if screen size is mobile
+      mobileFiltersPlaceholder.appendChild(filterSidebar.cloneNode(true));
+
+      // Connect listeners
+      connectFilterListeners(document); // Desktop filter sidebar
+      connectFilterListeners(mobileFiltersPlaceholder); // Mobile drawer filters
+
+      // Set initial values from URL query parameters if present
+      readURLParams();
+
+      filterProducts();
+    }
+
+    function readURLParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get('category');
+      const brandParam = urlParams.get('brand');
+      const sizeParam = urlParams.get('size');
+      const priceParam = urlParams.get('price');
+
+      if (catParam) {
+        activeCategories.push(catParam);
+        // Select check box in DOM
+        document.querySelectorAll(`.category-checkbox[value="${catParam}"]`).forEach(el => el.checked = true);
+        mobileFiltersPlaceholder.querySelectorAll(`.category-checkbox[value="${catParam}"]`).forEach(el => el.checked = true);
+      }
+      if (brandParam) {
+        activeBrands.push(brandParam);
+        document.querySelectorAll(`.brand-checkbox[value="${brandParam}"]`).forEach(el => el.checked = true);
+        mobileFiltersPlaceholder.querySelectorAll(`.brand-checkbox[value="${brandParam}"]`).forEach(el => el.checked = true);
+      }
+      if (sizeParam) {
+        activeSizes.push(sizeParam);
+        document.querySelectorAll(`.size-btn[value="${sizeParam}"]`).forEach(btn => btn.classList.add('bg-gold-500', 'text-charcoal-950', 'border-gold-500'));
+        mobileFiltersPlaceholder.querySelectorAll(`.size-btn[value="${sizeParam}"]`).forEach(btn => btn.classList.add('bg-gold-500', 'text-charcoal-950', 'border-gold-500'));
+      }
+      if (priceParam) {
+        maxPrice = parseInt(priceParam);
+        priceRange.value = maxPrice;
+        priceRangeVal.innerText = `$${maxPrice}`;
+        const mobRange = mobileFiltersPlaceholder.querySelector('#price-range');
+        if (mobRange) mobRange.value = maxPrice;
+        const mobVal = mobileFiltersPlaceholder.querySelector('#price-range-val');
+        if (mobVal) mobVal.innerText = `$${maxPrice}`;
+      }
+    }
+
+    function connectFilterListeners(rootNode) {
+      // Category checkboxes
+      rootNode.querySelectorAll('.category-checkbox').forEach(box => {
+        box.addEventListener('change', () => {
+          activeCategories = getCheckboxValues('.category-checkbox');
+          syncCheckboxStates('.category-checkbox', box.value, box.checked);
+          filterProducts();
+        });
+      });
+
+      // Brand checkboxes
+      rootNode.querySelectorAll('.brand-checkbox').forEach(box => {
+        box.addEventListener('change', () => {
+          activeBrands = getCheckboxValues('.brand-checkbox');
+          syncCheckboxStates('.brand-checkbox', box.value, box.checked);
+          filterProducts();
+        });
+      });
+
+      // Size buttons
+      rootNode.querySelectorAll('.size-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const val = btn.value;
+          const index = activeSizes.indexOf(val);
+          if (index > -1) {
+            activeSizes.splice(index, 1);
+            syncSizeBtnStates(val, false);
+          } else {
+            activeSizes.push(val);
+            syncSizeBtnStates(val, true);
+          }
+          filterProducts();
+        });
+      });
+
+      // Price slider
+      const slider = rootNode.querySelector('#price-range');
+      if (slider) {
+        slider.addEventListener('input', (e) => {
+          maxPrice = parseInt(e.target.value);
+          // Sync text values
+          document.getElementById('price-range-val').innerText = `$${maxPrice}`;
+          const mobVal = mobileFiltersPlaceholder.querySelector('#price-range-val');
+          if (mobVal) mobVal.innerText = `$${maxPrice}`;
+          // Sync slider inputs
+          priceRange.value = maxPrice;
+          const mobSlider = mobileFiltersPlaceholder.querySelector('#price-range');
+          if (mobSlider) mobSlider.value = maxPrice;
+
+          filterProducts();
+        });
+      }
+
+      // Clear Filters inside this root node
+      const clearBtn = rootNode.querySelector('#clear-filters-btn');
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          clearAllFilters();
+        });
+      }
+    }
+
+    function getCheckboxValues(selector) {
+      const active = [];
+      document.querySelectorAll(selector).forEach(box => {
+        if (box.checked) active.push(box.value);
+      });
+      return active;
+    }
+
+    function syncCheckboxStates(selector, value, checked) {
+      document.querySelectorAll(`${selector}[value="${value}"]`).forEach(box => box.checked = checked);
+      mobileFiltersPlaceholder.querySelectorAll(`${selector}[value="${value}"]`).forEach(box => box.checked = checked);
+    }
+
+    function syncSizeBtnStates(value, active) {
+      const allBtns = document.querySelectorAll(`.size-btn[value="${value}"]`);
+      allBtns.forEach(btn => {
+        if (active) {
+          btn.classList.add('bg-gold-500', 'text-charcoal-950', 'border-gold-500');
+        } else {
+          btn.classList.remove('bg-gold-500', 'text-charcoal-950', 'border-gold-500');
+        }
+      });
+      // Do the same for mobile drawer clone
+      mobileFiltersPlaceholder.querySelectorAll(`.size-btn[value="${value}"]`).forEach(btn => {
+        if (active) {
+          btn.classList.add('bg-gold-500', 'text-charcoal-950', 'border-gold-500');
+        } else {
+          btn.classList.remove('bg-gold-500', 'text-charcoal-950', 'border-gold-500');
+        }
+      });
+    }
+
+    function clearAllFilters() {
+      activeCategories = [];
+      activeBrands = [];
+      activeSizes = [];
+      maxPrice = 500;
+      searchQuery = "";
+
+      // Reset DOM checks
+      document.querySelectorAll('.category-checkbox').forEach(box => box.checked = false);
+      mobileFiltersPlaceholder.querySelectorAll('.category-checkbox').forEach(box => box.checked = false);
+
+      document.querySelectorAll('.brand-checkbox').forEach(box => box.checked = false);
+      mobileFiltersPlaceholder.querySelectorAll('.brand-checkbox').forEach(box => box.checked = false);
+
+      document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('bg-gold-500', 'text-charcoal-950', 'border-gold-500'));
+      mobileFiltersPlaceholder.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('bg-gold-500', 'text-charcoal-950', 'border-gold-500'));
+
+      priceRange.value = 500;
+      document.getElementById('price-range-val').innerText = "$500";
+      const mobRange = mobileFiltersPlaceholder.querySelector('#price-range');
+      if (mobRange) mobRange.value = 500;
+      const mobVal = mobileFiltersPlaceholder.querySelector('#price-range-val');
+      if (mobVal) mobVal.innerText = "$500";
+
+      searchInput.value = "";
+
+      filterProducts();
+    }
+
+    // Search query listener
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      filterProducts();
+    });
+
+    function filterProducts() {
+      const filtered = PRODUCTS.filter(p => {
+        const matchesSearch = p.name.toLowerCase().includes(searchQuery) || p.brand.toLowerCase().includes(searchQuery);
+        const matchesCategory = activeCategories.length === 0 || activeCategories.includes(p.category);
+        const matchesBrand = activeBrands.length === 0 || activeBrands.includes(p.brand);
+        const matchesSize = activeSizes.length === 0 || p.sizes.some(s => activeSizes.includes(s));
+        const matchesPrice = p.price <= maxPrice;
+
+        return matchesSearch && matchesCategory && matchesBrand && matchesSize && matchesPrice;
+      });
+
+      renderProducts(filtered);
+    }
+
+    function renderProducts(products) {
+      if (products.length === 0) {
+        productsGrid.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        resultsCount.innerText = "Showing 0 items";
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      productsGrid.classList.remove('hidden');
+      resultsCount.innerText = `Showing ${products.length} items`;
+
+      productsGrid.innerHTML = products.map(p => `
+        <div class="group bg-charcoal-50 dark:bg-charcoal-950 border border-transparent dark:border-white/5 hover:border-gold-500/20 rounded-2xl overflow-hidden shadow-md transition-all duration-300 flex flex-col h-full">
+          <div class="zoom-img-container h-64 bg-zinc-100 dark:bg-zinc-900 relative">
+            <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">${p.category}</span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow">
+            <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
+              <span>${p.brand}</span>
+              <div class="flex items-center text-gold-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span class="ml-1 font-semibold">${p.rating}</span>
+              </div>
+            </div>
+            <h3 class="font-bold text-charcoal-900 dark:text-white mb-2 line-clamp-1">${p.name}</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">${p.desc}</p>
+            <div class="text-[10px] text-gray-400 mb-4">Available Sizes: <span class="font-bold">${p.sizes.join(', ')}</span></div>
+            <div class="flex items-center justify-between mt-auto">
+              <span class="text-lg font-bold text-gold-500">$${p.price}.00</span>
+              <button class="px-4 py-2 bg-charcoal-950 hover:bg-gold-500 hover:text-charcoal-950 dark:bg-gold-500 dark:hover:bg-gold-600 dark:text-charcoal-950 text-white rounded-lg text-[10px] font-bold transition-all" onclick="openDetailsModal(${p.id})">View Details</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Modal Details Box
+    function openDetailsModal(productId) {
+      const p = PRODUCTS.find(prod => prod.id === productId);
+      if (!p) return;
+
+      const detailModal = document.createElement('div');
+      detailModal.className = 'fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fade-in-up';
+      detailModal.id = 'details-modal';
+      detailModal.innerHTML = `
+        <div class="relative w-full max-w-2xl bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/10 rounded-2xl shadow-2xl overflow-hidden p-6 text-charcoal-900 dark:text-white flex flex-col md:flex-row gap-6">
+          <button class="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-colors z-10" onclick="document.getElementById('details-modal').remove()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+          <div class="w-full md:w-1/2 h-64 md:h-auto rounded-lg overflow-hidden">
+            <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover">
+          </div>
+          <div class="w-full md:w-1/2 flex flex-col justify-between">
+            <div class="space-y-3">
+              <span class="text-xs text-gold-500 uppercase tracking-widest font-bold">${p.brand}</span>
+              <h3 class="text-2xl font-bold luxury-text">${p.name}</h3>
+              <div class="flex items-center text-gold-500 text-xs gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span class="font-bold">${p.rating} / 5.0</span>
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">${p.desc}</p>
+              <div class="text-xs text-gray-400">Category: <span class="font-semibold">${p.category}</span></div>
+              <div class="text-xs text-gray-400">Available Sizes: <span class="font-bold">${p.sizes.join(', ')}</span></div>
+            </div>
+            <div class="mt-6 flex items-center justify-between">
+              <span class="text-2xl font-bold text-gold-500">$${p.price}.00</span>
+              <button class="px-6 py-3 bg-gold-500 hover:bg-gold-600 text-charcoal-950 font-bold rounded-lg text-xs" onclick="document.getElementById('details-modal').remove(); alert('Item added to luxury bag!')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(detailModal);
+    }
+
+    // Mobile filters drawer controls
+    mobileFilterBtn.addEventListener('click', () => {
+      mobileFilterDrawer.classList.remove('invisible');
+      mobileFilterOverlay.classList.remove('hidden');
+      setTimeout(() => mobileFilterOverlay.classList.add('opacity-100'), 10);
+      mobileFilterDrawer.classList.remove('-translate-x-full');
+      mobileFilterDrawer.classList.add('translate-x-0');
+      document.body.classList.add('overflow-hidden');
+    });
+
+    const closeMobileDrawer = () => {
+      mobileFilterOverlay.classList.remove('opacity-100');
+      mobileFilterOverlay.classList.add('opacity-0');
+      setTimeout(() => {
+        mobileFilterOverlay.classList.add('hidden');
+        mobileFilterDrawer.classList.add('invisible');
+      }, 300);
+      mobileFilterDrawer.classList.remove('translate-x-0');
+      mobileFilterDrawer.classList.add('-translate-x-full');
+      document.body.classList.remove('overflow-hidden');
+    };
+
+    closeMobileFilterBtn.addEventListener('click', closeMobileDrawer);
+    mobileFilterOverlay.addEventListener('click', closeMobileDrawer);
+
+    // Run filters on startup
+    initFilters();
+  </script>
+</body>
+
+</html>
