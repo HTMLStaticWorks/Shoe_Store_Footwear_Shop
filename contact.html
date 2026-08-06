@@ -81,17 +81,17 @@
 
         <!-- Desktop Nav -->
         <nav
-          class="hidden lg:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-charcoal-900 dark:text-gray-300">
+          class="hidden xl:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-charcoal-900 dark:text-gray-300">
           <a href="index.html" class="hover:text-gold-500 transition-colors">Home 1</a>
           <a href="home2.html" class="hover:text-gold-500 transition-colors">Home 2</a>
-          <a href="shop.html" class="hover:text-gold-500 transition-colors">Shop</a>
           <a href="about.html" class="hover:text-gold-500 transition-colors">About Us</a>
+          <a href="shop.html" class="hover:text-gold-500 transition-colors">Shop</a>
           <a href="blog.html" class="hover:text-gold-500 transition-colors">Blog</a>
           <a href="contact.html" class="text-gold-500 font-bold transition-colors">Contact</a>
         </nav>
 
         <!-- Desktop Actions -->
-        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+        <div class="hidden xl:flex items-center space-x-4 rtl:space-x-reverse">
           <button
             class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/30 hover:bg-gold-500/10 text-gold-500 font-bold text-xs transition-all duration-300 shrink-0">
             <span class="rtl-btn-text">RTL</span>
@@ -106,7 +106,7 @@
         </div>
 
         <!-- Mobile Controls (Hamburger) -->
-        <div class="flex items-center space-x-3 rtl:space-x-reverse lg:hidden">
+        <div class="flex items-center space-x-3 rtl:space-x-reverse xl:hidden">
           <button id="mobile-menu-btn"
             class="w-9 h-9 rounded-full flex items-center justify-center text-charcoal-900 dark:text-white hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-all duration-300 shrink-0">
             <i data-lucide="menu" class="w-5 h-5"></i>
@@ -122,7 +122,7 @@
 
   <!-- Mobile Navigation Drawer -->
   <div id="mobile-nav-drawer"
-    class="fixed top-0 right-0 bottom-0 z-50 w-80 bg-white dark:bg-charcoal-900 shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col justify-between invisible">
+    class="fixed top-0 right-0 bottom-0 z-50 w-full bg-white dark:bg-charcoal-900 shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col justify-between invisible">
     <div>
       <div class="flex items-center justify-between mb-8">
         <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
@@ -147,10 +147,10 @@
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 1</a>
         <a href="home2.html"
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 2</a>
-        <a href="shop.html"
-          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Shop</a>
         <a href="about.html"
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">About Us</a>
+        <a href="shop.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Shop</a>
         <a href="blog.html"
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Blog</a>
         <a href="contact.html" class="block text-lg font-bold text-gold-500 py-2">Contact</a>
@@ -175,7 +175,7 @@
   </div>
 
   <!-- Contact Hero -->
-  <section class="relative bg-zinc-950 py-24 text-center text-white overflow-hidden w-full">
+  <section class="relative bg-zinc-950 py-32 text-center text-white overflow-hidden w-full">
     <div class="absolute inset-0 opacity-15">
       <img src="https://images.pexels.com/photos/267301/pexels-photo-267301.jpeg" alt="Showroom client space"
         class="w-full h-full object-cover">
@@ -189,7 +189,7 @@
   <!-- SECTION 1 & 2: Contact Information & Store Hours & Social Media -->
   <section class="py-20 bg-white dark:bg-charcoal-900 w-full overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
 
         <!-- Address & Map Info -->
         <div
@@ -245,7 +245,7 @@
             uploads.</p>
           <div class="flex space-x-3 rtl:space-x-reverse pt-2">
             <a href="#"
-              class="flex items-center justify-center w-8 h-8 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"
+              class="flex items-center justify-center w-8 h-8 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 dark:hover:bg-gold-500 hover:text-charcoal-950 dark:hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"
               aria-label="Instagram">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -255,7 +255,7 @@
               </svg>
             </a>
             <a href="#"
-              class="flex items-center justify-center w-8 h-8 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"
+              class="flex items-center justify-center w-8 h-8 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 dark:hover:bg-gold-500 hover:text-charcoal-950 dark:hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"
               aria-label="Facebook">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -263,7 +263,7 @@
               </svg>
             </a>
             <a href="#"
-              class="flex items-center justify-center w-8 h-8 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"
+              class="flex items-center justify-center w-8 h-8 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 dark:hover:bg-gold-500 hover:text-charcoal-950 dark:hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"
               aria-label="Twitter">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
@@ -328,6 +328,30 @@
           <p class="text-xs text-gray-500 dark:text-gray-400 mt-3 leading-relaxed">
             Yes, custom wide (EE) and narrow (D) formats can be tailored at our physical ateliers. Please submit a
             request via our inquiry form below or schedule an online appointment.
+          </p>
+        </details>
+
+        <details
+          class="group bg-charcoal-50 dark:bg-charcoal-950 border border-gray-100 dark:border-white/5 rounded-xl p-5 cursor-pointer">
+          <summary
+            class="flex justify-between items-center font-bold text-sm text-charcoal-900 dark:text-white outline-none">
+            <span>Do you offer international shipping?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-gold-500 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-3 leading-relaxed">
+            Yes, we ship worldwide. International delivery typically takes 5-10 business days depending on the destination and customs processing.
+          </p>
+        </details>
+
+        <details
+          class="group bg-charcoal-50 dark:bg-charcoal-950 border border-gray-100 dark:border-white/5 rounded-xl p-5 cursor-pointer">
+          <summary
+            class="flex justify-between items-center font-bold text-sm text-charcoal-900 dark:text-white outline-none">
+            <span>How can I track my order?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-gold-500 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-3 leading-relaxed">
+            Once your order has been dispatched, you will receive a tracking link via email. You can also track your order directly through your SOLE account dashboard.
           </p>
         </details>
       </div>
@@ -559,7 +583,7 @@
       <div
         class="pt-8 border-t border-gray-200 dark:border-white/5 text-center md:flex md:justify-between md:items-center text-xs text-gray-500">
         <p>&copy; 2026 SOLE Footwear Group. All luxury rights reserved.</p>
-        <div class="mt-4 md:mt-0 space-x-4 rtl:space-x-reverse">
+        <div class="mt-4 md:mt-0 flex flex-wrap justify-center gap-4">
           <a href="#" class="hover:text-gold-500">Privacy Policy</a>
           <a href="#" class="hover:text-gold-500">Terms of Service</a>
           <a href="#" class="hover:text-gold-500">Accessibility</a>

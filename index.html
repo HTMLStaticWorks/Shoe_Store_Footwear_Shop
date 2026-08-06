@@ -81,17 +81,17 @@
 
         <!-- Desktop Nav -->
         <nav
-          class="hidden lg:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-charcoal-900 dark:text-gray-300">
+          class="hidden xl:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-charcoal-900 dark:text-gray-300">
           <a href="index.html" class="text-gold-500 font-bold transition-colors">Home 1</a>
           <a href="home2.html" class="hover:text-gold-500 transition-colors">Home 2</a>
-          <a href="shop.html" class="hover:text-gold-500 transition-colors">Shop</a>
           <a href="about.html" class="hover:text-gold-500 transition-colors">About Us</a>
+          <a href="shop.html" class="hover:text-gold-500 transition-colors">Shop</a>
           <a href="blog.html" class="hover:text-gold-500 transition-colors">Blog</a>
           <a href="contact.html" class="hover:text-gold-500 transition-colors">Contact</a>
         </nav>
 
         <!-- Desktop Actions -->
-        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+        <div class="hidden xl:flex items-center space-x-4 rtl:space-x-reverse">
           <button
             class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/30 hover:bg-gold-500/10 text-gold-500 font-bold text-xs transition-all duration-300 shrink-0">
             <span class="rtl-btn-text">RTL</span>
@@ -106,7 +106,7 @@
         </div>
 
         <!-- Mobile Controls (Hamburger) -->
-        <div class="flex items-center space-x-3 rtl:space-x-reverse lg:hidden">
+        <div class="flex items-center space-x-3 rtl:space-x-reverse xl:hidden">
           <button id="mobile-menu-btn"
             class="w-9 h-9 rounded-full flex items-center justify-center text-charcoal-900 dark:text-white hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-all duration-300 shrink-0">
             <i data-lucide="menu" class="w-5 h-5"></i>
@@ -122,7 +122,7 @@
 
   <!-- Mobile Navigation Drawer -->
   <div id="mobile-nav-drawer"
-    class="fixed top-0 right-0 bottom-0 z-50 w-80 bg-white dark:bg-charcoal-900 shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col justify-between invisible">
+    class="fixed top-0 right-0 bottom-0 z-50 w-full bg-white dark:bg-charcoal-900 shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col justify-between invisible">
     <div>
       <div class="flex items-center justify-between mb-8">
         <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
@@ -146,10 +146,10 @@
         <a href="index.html" class="block text-lg font-bold text-gold-500 py-2">Home 1</a>
         <a href="home2.html"
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 2</a>
-        <a href="shop.html"
-          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Shop</a>
         <a href="about.html"
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">About Us</a>
+        <a href="shop.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Shop</a>
         <a href="blog.html"
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Blog</a>
         <a href="contact.html"
@@ -272,7 +272,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="text-xs text-gold-500 font-bold tracking-widest uppercase block mb-8">GLOBAL LUXURY RETAILERS &
         BRANDS</span>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60 dark:opacity-80">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center opacity-60 dark:opacity-80">
         <div class="text-base sm:text-2xl font-serif text-charcoal-900 dark:text-zinc-300 tracking-wider">SOLE ITALY</div>
         <div class="text-base sm:text-2xl font-serif text-charcoal-900 dark:text-zinc-300 tracking-wider">KINETIC GRIP</div>
         <div class="text-base sm:text-2xl font-serif text-charcoal-900 dark:text-zinc-300 tracking-wider">MONARCH LTHR</div>
@@ -296,7 +296,7 @@
         </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Product 1 -->
         <div
           class="group bg-charcoal-50 dark:bg-charcoal-950 border border-transparent dark:border-white/5 hover:border-gold-500/20 rounded-2xl overflow-hidden shadow-md transition-all duration-300 flex flex-col h-full">
@@ -358,7 +358,7 @@
 
         <!-- Product 3 -->
         <div
-          class="group bg-charcoal-50 dark:bg-charcoal-950 border border-transparent dark:border-white/5 hover:border-gold-500/20 rounded-2xl overflow-hidden shadow-md transition-all duration-300 flex flex-col h-full">
+          class="group bg-charcoal-50 dark:bg-charcoal-950 border border-transparent dark:border-white/5 hover:border-gold-500/20 rounded-2xl overflow-hidden shadow-md transition-all duration-300 flex flex-col h-full sm:col-span-2 lg:col-span-1 sm:justify-self-center lg:justify-self-auto sm:w-[calc(50%-1rem)] lg:w-full">
           <div class="zoom-img-container h-80 bg-zinc-100 dark:bg-zinc-900 relative">
             <span
               class="absolute top-4 left-4 bg-gold-500 text-charcoal-950 text-xs font-bold px-3 py-1 rounded-full z-10 shadow-sm">NEW</span>
@@ -519,7 +519,7 @@
         </div>
 
         <!-- Festival -->
-        <div class="relative h-[28rem] rounded-2xl overflow-hidden shadow-lg group">
+        <div class="relative h-[28rem] rounded-2xl overflow-hidden shadow-lg group md:col-span-2 lg:col-span-1 md:justify-self-center lg:justify-self-auto md:w-[calc(50%-1rem)] lg:w-full">
           <img src="https://images.pexels.com/photos/26851200/pexels-photo-26851200.jpeg"
             alt="Festival luxury footwear collection"
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
@@ -541,10 +541,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
-          <span class="text-gold-500 uppercase tracking-widest text-xs font-bold block mb-3">OUR CREDENTIALS</span>
-          <h2 class="text-3xl md:text-5xl font-extrabold text-charcoal-900 dark:text-white mb-6">Why SOLE Stands Apart
+          <span class="text-gold-500 uppercase tracking-widest text-xs font-bold block mb-3 text-center lg:text-left">OUR CREDENTIALS</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-charcoal-900 dark:text-white mb-6 text-center lg:text-left">Why SOLE Stands Apart
           </h2>
-          <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+          <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed text-center lg:text-left">
             With decades of footwear excellence, we design with orthopedic perfection and luxury appearance. We combine
             century-old Italian leatherwork with advanced foam technology.
           </p>
@@ -593,18 +593,18 @@
         <!-- Testimonial 1 -->
         <div
           class="p-8 bg-charcoal-50 dark:bg-charcoal-950 border border-transparent dark:border-white/5 rounded-2xl shadow-sm">
-          <div class="flex items-center text-gold-500 mb-4">
+          <div class="flex items-center justify-center text-gold-500 mb-4">
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
           </div>
-          <p class="text-gray-600 dark:text-gray-400 mb-6 italic text-sm leading-relaxed">
+          <p class="text-center text-gray-600 dark:text-gray-400 mb-6 italic text-sm leading-relaxed">
             "The oxfords I ordered from SOLE are by far the finest shoes I have ever owned. Exceptional build quality,
             comfortable out-of-the-box, and the leather aroma is wonderful!"
           </p>
-          <div class="flex items-start space-x-3 rtl:space-x-reverse">
+          <div class="flex items-center justify-center space-x-3 rtl:space-x-reverse text-left">
             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120&h=120" alt="Harrison Vance" class="w-10 h-10 rounded-full object-cover shrink-0 border border-gray-100 dark:border-white/10 mt-0.5">
             <div>
               <h4 class="font-bold text-sm text-charcoal-900 dark:text-white">Harrison Vance</h4>
@@ -616,18 +616,18 @@
         <!-- Testimonial 2 -->
         <div
           class="p-8 bg-charcoal-50 dark:bg-charcoal-950 border border-transparent dark:border-white/5 rounded-2xl shadow-sm">
-          <div class="flex items-center text-gold-500 mb-4">
+          <div class="flex items-center justify-center text-gold-500 mb-4">
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
           </div>
-          <p class="text-gray-600 dark:text-gray-400 mb-6 italic text-sm leading-relaxed">
+          <p class="text-center text-gray-600 dark:text-gray-400 mb-6 italic text-sm leading-relaxed">
             "SOLE athletic runners have changed my game. The speed boost from the carbon fiber is real, and it doesn't
             cause heel blisters during long marathon runs. Superb product!"
           </p>
-          <div class="flex items-start space-x-3 rtl:space-x-reverse">
+          <div class="flex items-center justify-center space-x-3 rtl:space-x-reverse text-left">
             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=120&h=120" alt="Clara DuPont" class="w-10 h-10 rounded-full object-cover shrink-0 border border-gray-100 dark:border-white/10 mt-0.5">
             <div>
               <h4 class="font-bold text-sm text-charcoal-900 dark:text-white">Clara DuPont</h4>
@@ -639,18 +639,18 @@
         <!-- Testimonial 3 -->
         <div
           class="p-8 bg-charcoal-50 dark:bg-charcoal-950 border border-transparent dark:border-white/5 rounded-2xl shadow-sm">
-          <div class="flex items-center text-gold-500 mb-4">
+          <div class="flex items-center justify-center text-gold-500 mb-4">
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
           </div>
-          <p class="text-gray-600 dark:text-gray-400 mb-6 italic text-sm leading-relaxed">
+          <p class="text-center text-gray-600 dark:text-gray-400 mb-6 italic text-sm leading-relaxed">
             "Their customer concierge and size guide converted perfectly. The fit recommendations were highly accurate.
             Fast express delivery. I will definitely purchase my winter boots here!"
           </p>
-          <div class="flex items-start space-x-3 rtl:space-x-reverse">
+          <div class="flex items-center justify-center space-x-3 rtl:space-x-reverse text-left">
             <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=120&h=120" alt="Marcus Sterling" class="w-10 h-10 rounded-full object-cover shrink-0 border border-gray-100 dark:border-white/10 mt-0.5">
             <div>
               <h4 class="font-bold text-sm text-charcoal-900 dark:text-white">Marcus Sterling</h4>
@@ -835,7 +835,7 @@
       <div
         class="pt-8 border-t border-gray-200 dark:border-white/5 text-center md:flex md:justify-between md:items-center text-xs text-gray-500">
         <p>&copy; 2026 SOLE Footwear Group. All luxury rights reserved.</p>
-        <div class="mt-4 md:mt-0 space-x-4 rtl:space-x-reverse">
+        <div class="mt-4 md:mt-0 flex flex-wrap justify-center gap-4">
           <a href="#" class="hover:text-gold-500">Privacy Policy</a>
           <a href="#" class="hover:text-gold-500">Terms of Service</a>
           <a href="#" class="hover:text-gold-500">Accessibility</a>

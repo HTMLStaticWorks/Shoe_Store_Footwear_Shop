@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollToTop();
   initSizeGuideModal();
   initFormsValidation();
+  initPasswordToggle();
 });
 
 // 1. Theme Toggle System (Light / Dark)
@@ -411,6 +412,27 @@ function clearInputError(input) {
   if (errorDiv) {
     errorDiv.remove();
   }
+}
+
+// 9. Password Visibility Toggle
+function initPasswordToggle() {
+  const toggleBtns = document.querySelectorAll('.toggle-password');
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const targetInput = document.getElementById(targetId);
+      if (targetInput) {
+        if (targetInput.type === 'password') {
+          targetInput.type = 'text';
+          btn.innerHTML = '<i data-lucide="eye-off" class="w-4 h-4"></i>';
+        } else {
+          targetInput.type = 'password';
+          btn.innerHTML = '<i data-lucide="eye" class="w-4 h-4"></i>';
+        }
+        lucide.createIcons();
+      }
+    });
+  });
 }
 
 function showSuccessMessage(form, message) {

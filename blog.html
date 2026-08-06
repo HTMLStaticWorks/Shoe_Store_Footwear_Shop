@@ -81,17 +81,17 @@
 
         <!-- Desktop Nav -->
         <nav
-          class="hidden lg:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-charcoal-900 dark:text-gray-300">
+          class="hidden xl:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-charcoal-900 dark:text-gray-300">
           <a href="index.html" class="hover:text-gold-500 transition-colors">Home 1</a>
           <a href="home2.html" class="hover:text-gold-500 transition-colors">Home 2</a>
-          <a href="shop.html" class="hover:text-gold-500 transition-colors">Shop</a>
           <a href="about.html" class="hover:text-gold-500 transition-colors">About Us</a>
+          <a href="shop.html" class="hover:text-gold-500 transition-colors">Shop</a>
           <a href="blog.html" class="text-gold-500 font-bold transition-colors">Blog</a>
           <a href="contact.html" class="hover:text-gold-500 transition-colors">Contact</a>
         </nav>
 
         <!-- Desktop Actions -->
-        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+        <div class="hidden xl:flex items-center space-x-4 rtl:space-x-reverse">
           <button
             class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/30 hover:bg-gold-500/10 text-gold-500 font-bold text-xs transition-all duration-300 shrink-0">
             <span class="rtl-btn-text">RTL</span>
@@ -106,7 +106,7 @@
         </div>
 
         <!-- Mobile Controls (Hamburger) -->
-        <div class="flex items-center space-x-3 rtl:space-x-reverse lg:hidden">
+        <div class="flex items-center space-x-3 rtl:space-x-reverse xl:hidden">
           <button id="mobile-menu-btn"
             class="w-9 h-9 rounded-full flex items-center justify-center text-charcoal-900 dark:text-white hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-all duration-300 shrink-0">
             <i data-lucide="menu" class="w-5 h-5"></i>
@@ -122,7 +122,7 @@
 
   <!-- Mobile Navigation Drawer -->
   <div id="mobile-nav-drawer"
-    class="fixed top-0 right-0 bottom-0 z-50 w-80 bg-white dark:bg-charcoal-900 shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col justify-between invisible">
+    class="fixed top-0 right-0 bottom-0 z-50 w-full bg-white dark:bg-charcoal-900 shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col justify-between invisible">
     <div>
       <div class="flex items-center justify-between mb-8">
         <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
@@ -147,10 +147,10 @@
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 1</a>
         <a href="home2.html"
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 2</a>
-        <a href="shop.html"
-          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Shop</a>
         <a href="about.html"
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">About Us</a>
+        <a href="shop.html"
+          class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Shop</a>
         <a href="blog.html" class="block text-lg font-bold text-gold-500 py-2">Blog</a>
         <a href="contact.html"
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Contact</a>
@@ -175,7 +175,7 @@
   </div>
 
   <!-- Blog Hero & Search Header -->
-  <section class="relative bg-zinc-950 py-24 text-white overflow-hidden animate-fade-in w-full">
+  <section class="relative bg-zinc-950 py-32 text-white overflow-hidden animate-fade-in w-full">
     <div class="absolute inset-0 opacity-55">
       <img src="https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?auto=format&fit=crop&q=80&w=1200"
         alt="SOLE Editorial Chronicles backdrop" class="w-full h-full object-cover">
@@ -275,7 +275,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
         <!-- Care 1 -->
-        <div class="space-y-4 border-b border-gray-100 dark:border-white/5 lg:border-b-0 pb-8 lg:pb-0">
+        <div class="space-y-4 border-b border-gray-100 dark:border-white/5 lg:border-b-0 pb-8 lg:pb-0 text-center lg:text-left">
           <div class="h-56 rounded-2xl overflow-hidden zoom-img-container">
             <img src="https://images.pexels.com/photos/37358113/pexels-photo-37358113.jpeg"
               alt="Leather shoes cleaning guide" class="w-full h-full object-cover">
@@ -290,7 +290,7 @@
         </div>
 
         <!-- Care 2 -->
-        <div class="space-y-4 border-b border-gray-100 dark:border-white/5 lg:border-b-0 pb-8 lg:pb-0">
+        <div class="space-y-4 border-b border-gray-100 dark:border-white/5 lg:border-b-0 pb-8 lg:pb-0 text-center lg:text-left">
           <div class="h-56 rounded-2xl overflow-hidden zoom-img-container">
             <img src="https://images.pexels.com/photos/4914661/pexels-photo-4914661.jpeg" alt="Cleaning white sneakers"
               class="w-full h-full object-cover">
@@ -305,7 +305,7 @@
         </div>
 
         <!-- Care 3 -->
-        <div class="space-y-4">
+        <div class="space-y-4 text-center lg:text-left">
           <div class="h-56 rounded-2xl overflow-hidden zoom-img-container">
             <img src="https://images.pexels.com/photos/11893741/pexels-photo-11893741.jpeg" alt="Suede shoe protection"
               class="w-full h-full object-cover">
@@ -412,12 +412,12 @@
   <section class="py-12 bg-white dark:bg-charcoal-900 border-t border-gray-100 dark:border-white/5 w-full overflow-hidden">
     <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse text-xs font-semibold">
       <button
-        class="px-4 py-2 border border-gray-200 dark:border-white/10 hover:border-gold-500 rounded-lg text-gray-500">Prev</button>
+        class="px-4 py-2 border border-gray-200 dark:border-white/10 hover:border-gold-500 hover:text-gold-500 transition-colors rounded-lg text-gray-500">Prev</button>
       <button class="px-4 py-2 bg-gold-500 text-charcoal-950 rounded-lg font-bold">1</button>
       <button
-        class="px-4 py-2 border border-gray-200 dark:border-white/10 hover:border-gold-500 rounded-lg text-gray-500">2</button>
+        class="px-4 py-2 border border-gray-200 dark:border-white/10 hover:border-gold-500 hover:text-gold-500 transition-colors rounded-lg text-gray-500">2</button>
       <button
-        class="px-4 py-2 border border-gray-200 dark:border-white/10 hover:border-gold-500 rounded-lg text-gray-500">Next</button>
+        class="px-4 py-2 border border-gray-200 dark:border-white/10 hover:border-gold-500 hover:text-gold-500 transition-colors rounded-lg text-gray-500">Next</button>
     </div>
   </section>
 
@@ -539,7 +539,7 @@
       <div
         class="pt-8 border-t border-gray-200 dark:border-white/5 text-center md:flex md:justify-between md:items-center text-xs text-gray-500">
         <p>&copy; 2026 SOLE Footwear Group. All luxury rights reserved.</p>
-        <div class="mt-4 md:mt-0 space-x-4 rtl:space-x-reverse">
+        <div class="mt-4 md:mt-0 flex flex-wrap justify-center gap-4">
           <a href="#" class="hover:text-gold-500">Privacy Policy</a>
           <a href="#" class="hover:text-gold-500">Terms of Service</a>
           <a href="#" class="hover:text-gold-500">Accessibility</a>

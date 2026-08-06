@@ -81,17 +81,17 @@
 
         <!-- Desktop Nav -->
         <nav
-          class="hidden lg:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-charcoal-900 dark:text-gray-300">
+          class="hidden xl:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-charcoal-900 dark:text-gray-300">
           <a href="index.html" class="hover:text-gold-500 transition-colors">Home 1</a>
           <a href="home2.html" class="hover:text-gold-500 transition-colors">Home 2</a>
-          <a href="shop.html" class="text-gold-500 font-bold transition-colors">Shop</a>
           <a href="about.html" class="hover:text-gold-500 transition-colors">About Us</a>
+          <a href="shop.html" class="text-gold-500 font-bold transition-colors">Shop</a>
           <a href="blog.html" class="hover:text-gold-500 transition-colors">Blog</a>
           <a href="contact.html" class="hover:text-gold-500 transition-colors">Contact</a>
         </nav>
 
         <!-- Desktop Actions -->
-        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+        <div class="hidden xl:flex items-center space-x-4 rtl:space-x-reverse">
           <button
             class="rtl-toggle-btn w-10 h-10 rounded-full flex items-center justify-center border border-gold-500/30 hover:bg-gold-500/10 text-gold-500 font-bold text-xs transition-all duration-300 shrink-0">
             <span class="rtl-btn-text">RTL</span>
@@ -106,7 +106,7 @@
         </div>
 
         <!-- Mobile Controls (Hamburger) -->
-        <div class="flex items-center space-x-3 rtl:space-x-reverse lg:hidden">
+        <div class="flex items-center space-x-3 rtl:space-x-reverse xl:hidden">
           <button id="mobile-menu-btn"
             class="w-9 h-9 rounded-full flex items-center justify-center text-charcoal-900 dark:text-white hover:bg-gray-100 dark:hover:bg-charcoal-800 transition-all duration-300 shrink-0">
             <i data-lucide="menu" class="w-5 h-5"></i>
@@ -122,7 +122,7 @@
 
   <!-- Mobile Navigation Drawer -->
   <div id="mobile-nav-drawer"
-    class="fixed top-0 right-0 bottom-0 z-50 w-80 bg-white dark:bg-charcoal-900 shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col justify-between invisible">
+    class="fixed top-0 right-0 bottom-0 z-50 w-full bg-white dark:bg-charcoal-900 shadow-2xl p-6 transform translate-x-full transition-transform duration-300 flex flex-col justify-between invisible">
     <div>
       <div class="flex items-center justify-between mb-8">
         <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse">
@@ -147,9 +147,9 @@
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 1</a>
         <a href="home2.html"
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Home 2</a>
-        <a href="shop.html" class="block text-lg font-bold text-gold-500 py-2">Shop</a>
         <a href="about.html"
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">About Us</a>
+        <a href="shop.html" class="block text-lg font-bold text-gold-500 py-2">Shop</a>
         <a href="blog.html"
           class="block text-lg font-medium text-charcoal-900 dark:text-white hover:text-gold-500 py-2">Blog</a>
         <a href="contact.html"
@@ -175,7 +175,7 @@
   </div>
 
   <!-- Shop Hero Banner -->
-  <section class="relative bg-zinc-950 py-20 text-center text-white overflow-hidden w-full">
+  <section class="relative bg-zinc-950 py-32 text-center text-white overflow-hidden w-full">
     <div class="absolute inset-0 opacity-15">
       <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&q=80&w=1200"
         alt="Shop catalog banner" class="w-full h-full object-cover">
@@ -206,7 +206,7 @@
           <span class="text-xs text-gray-500 dark:text-gray-400 font-semibold" id="results-count">Showing 12
             items</span>
           <button id="mobile-filter-btn"
-            class="md:hidden flex items-center space-x-2 px-4 py-2 border border-gold-500/20 text-gold-500 hover:bg-gold-500/10 rounded-lg text-xs font-bold transition-all">
+            class="lg:hidden flex items-center space-x-2 px-4 py-2 border border-gold-500/20 text-gold-500 hover:bg-gold-500/10 rounded-lg text-xs font-bold transition-all">
             <i data-lucide="sliders-horizontal" class="w-4 h-4"></i>
             <span>Filters</span>
           </button>
@@ -282,7 +282,8 @@
 
   <!-- STORE SERVICES & NEWSLETTER -->
   <!-- Services -->
-  <section class="py-16 bg-zinc-50 dark:bg-charcoal-950 border-t border-black/5 dark:border-white/5 w-full overflow-hidden">
+  <section
+    class="py-16 bg-zinc-50 dark:bg-charcoal-950 border-t border-black/5 dark:border-white/5 w-full overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-sm text-gray-500">
         <div class="space-y-3">
@@ -365,13 +366,33 @@
           </div>
           <div class="flex space-x-4 rtl:space-x-reverse">
             <a href="#"
-              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg
+                class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg></a>
             <a href="#"
-              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg
+                class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg></a>
             <a href="#"
-              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg
+                class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg></a>
             <a href="#"
-              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg></a>
+              class="p-2 rounded-full bg-charcoal-900/5 dark:bg-white/5 hover:bg-gold-500 hover:text-charcoal-950 text-charcoal-900 dark:text-white transition-all"><svg
+                class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z">
+                </path>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg></a>
           </div>
         </div>
 
@@ -428,7 +449,7 @@
       <div
         class="pt-8 border-t border-gray-200 dark:border-white/5 text-center md:flex md:justify-between md:items-center text-xs text-gray-500">
         <p>&copy; 2026 SOLE Footwear Group. All luxury rights reserved.</p>
-        <div class="mt-4 md:mt-0 space-x-4 rtl:space-x-reverse">
+        <div class="mt-4 md:mt-0 flex flex-wrap justify-center gap-4">
           <a href="#" class="hover:text-gold-500">Privacy Policy</a>
           <a href="#" class="hover:text-gold-500">Terms of Service</a>
           <a href="#" class="hover:text-gold-500">Accessibility</a>
@@ -654,7 +675,7 @@
       { id: 9, name: "Lil' Steps Trainer", brand: "Steps Athletics", category: "Kids", sizes: ["1Y", "2Y", "3Y", "4Y"], price: 85, rating: 4.6, img: "https://images.pexels.com/photos/9537104/pexels-photo-9537104.jpeg", desc: "High comfort durable school/play sneakers for children.", collection: ["Kids Footwear", "School Collection"] },
       { id: 10, name: "Autumn Winter Hiker", brand: "Kinetic Grip", category: "Sports", sizes: ["8", "9", "10", "11", "12"], price: 260, rating: 4.9, img: "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&q=80&w=600", desc: "Heavily insulated hiking boot with deep rubber tread grips.", collection: ["Seasonal Collection (Winter)"] },
       { id: 11, name: "Empress Gold Heel", brand: "SOLE Italy", category: "Formal", sizes: ["6", "7", "8", "9"], price: 395, rating: 4.9, img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=600", desc: "Fine golden buckle detail formal dress shoes.", collection: ["Premium Collection"] },
-      { id: 12, name: "Monsoon Waterproof Pro", brand: "Kinetic Grip", category: "Sports", sizes: ["9", "10", "11"], price: 195, rating: 4.7, img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=600", desc: "Waterproof trail shoe designed to keep feet dry in intense wet conditions.", collection: ["Seasonal Collection (Monsoon)"] }
+      { id: 12, name: "Monsoon Waterproof Pro", brand: "Kinetic Grip", category: "Sports", sizes: ["9", "10", "11"], price: 195, rating: 4.7, img: "https://images.pexels.com/photos/27972214/pexels-photo-27972214.jpeg", desc: "Waterproof trail shoe designed to keep feet dry in intense wet conditions.", collection: ["Seasonal Collection (Monsoon)"] }
     ];
 
     // Filter states
@@ -710,7 +731,9 @@
       `).join('');
 
       // Port filter elements to mobile drawer if screen size is mobile
-      mobileFiltersPlaceholder.appendChild(filterSidebar.cloneNode(true));
+      const clonedSidebar = filterSidebar.cloneNode(true);
+      clonedSidebar.classList.remove('hidden', 'lg:block', 'lg:col-span-1');
+      mobileFiltersPlaceholder.appendChild(clonedSidebar);
 
       // Connect listeners
       connectFilterListeners(document); // Desktop filter sidebar
