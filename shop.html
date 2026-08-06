@@ -216,7 +216,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
         <!-- Left Column: Filter Sidebar (Desktop) -->
-        <aside id="filter-sidebar" class="hidden lg:block lg:col-span-1 space-y-8 pr-4">
+        <aside id="filter-sidebar" class="hidden lg:block lg:col-span-1 space-y-8 pr-4 lg:sticky lg:top-32 lg:self-start">
 
           <!-- Category Filter -->
           <div>
@@ -936,8 +936,8 @@
 
       productsGrid.innerHTML = products.map(p => `
         <div class="group bg-charcoal-50 dark:bg-charcoal-950 border border-transparent dark:border-white/5 hover:border-gold-500/20 rounded-2xl overflow-hidden shadow-md transition-all duration-300 flex flex-col h-full">
-          <div class="zoom-img-container h-64 bg-zinc-100 dark:bg-zinc-900 relative">
-            <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover">
+          <div class="zoom-img-container h-64 bg-zinc-100 dark:bg-zinc-900 relative overflow-hidden">
+            <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             <span class="absolute top-4 left-4 bg-charcoal-950 text-white dark:bg-white dark:text-charcoal-950 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">${p.category}</span>
           </div>
           <div class="p-5 flex flex-col flex-grow">
