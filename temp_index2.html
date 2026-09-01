@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" class="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura | Home 2 - Luxury Artisan Gift Collection</title>
+  <meta name="description" content="Explore our Home 2 luxury artisan gift collection, custom engraved keepsakes, interactive gift finder, and flash deals.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Tailwind CSS 3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            coral: { DEFAULT: '#FF6B6B', hover: '#fa5252' },
+            cream: { DEFAULT: '#FFF8F0', card: '#FFFFFF' },
+            forest: { DEFAULT: '#2F5D50', dark: '#1E3E35' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-cream text-gray-800 dark:bg-gray-950 dark:text-gray-100 min-h-screen flex flex-col justify-between selection:bg-coral selection:text-white">
+
+  <!-- ================= TOP ANNOUNCEMENT TICKER ================= -->
+  <div class="bg-forest text-white text-xs font-semibold py-2 px-4 text-center flex items-center justify-center gap-3">
+    <span class="badge-coral text-[10px]">Special Offer</span>
+    <span>⚡ Free Custom Name Engraving on all orders over $60! Use Code: <strong class="text-amber-300">ENGRAVE2026</strong></span>
+  </div>
+
+  <!-- ================= STICKY HEADER ================= -->
+  <header class="sticky top-0 z-40 glass-header shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-coral to-amber-400 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-gift text-white text-xl"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-2xl tracking-tight text-gray-900 dark:text-white leading-none">
+              Aura
+            </span>
+            <span class="text-[10px] tracking-widest text-forest dark:text-emerald-400 font-semibold uppercase">Souvenirs & Custom</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-5 xl:gap-7 text-sm font-semibold">
+          <div class="flex items-center gap-1 p-1 bg-gray-100/90 dark:bg-gray-800/90 rounded-full border border-gray-200/60 dark:border-gray-700/60 shadow-inner">
+            <a href="index.html" class="px-3.5 py-1.5 text-xs font-bold rounded-full text-gray-700 dark:text-gray-300 hover:text-coral hover:bg-coral/10 transition-all inline-flex items-center justify-center min-w-[76px]">Home 1</a>
+            <a href="index2.html" class="px-3.5 py-1.5 text-xs font-extrabold rounded-full bg-coral text-white shadow-sm transition-all inline-flex items-center justify-center min-w-[76px]">Home 2</a>
+          </div>
+          <a href="about.html" class="text-gray-600 dark:text-gray-300 hover:text-coral transition-colors">About</a>
+          <a href="shop.html" class="text-gray-600 dark:text-gray-300 hover:text-coral transition-colors">Shop</a>
+          <a href="personalization.html" class="text-gray-600 dark:text-gray-300 hover:text-coral transition-colors">Personalization</a>
+          <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-coral transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Utilities -->
+        <div class="flex items-center gap-3">
+          <button class="wishlist-trigger-btn relative p-2.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200 transition-colors" title="Wishlist">
+            <i class="fa-regular fa-heart text-lg"></i>
+            <span class="wishlist-count-badge hidden absolute -top-1 -right-1 w-5 h-5 rounded-full bg-coral text-white text-[10px] font-bold flex items-center justify-center shadow-sm">0</span>
+          </button>
+
+          <button class="cart-trigger-btn relative p-2.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200 transition-colors" title="Cart">
+            <i class="fa-solid fa-bag-shopping text-lg"></i>
+            <span class="cart-count-badge hidden absolute -top-1 -right-1 w-5 h-5 rounded-full bg-forest text-white text-[10px] font-bold flex items-center justify-center shadow-sm">0</span>
+          </button>
+
+          <button class="theme-toggle-btn p-2.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-amber-500 dark:text-yellow-300 transition-colors" title="Toggle Theme">
+            <i class="fa-solid fa-sun dark:hidden text-lg"></i>
+            <i class="fa-solid fa-moon hidden dark:block text-lg"></i>
+          </button>
+
+          <button class="rtl-toggle-btn p-2.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-forest dark:text-emerald-400 transition-colors" title="Toggle Layout Direction"><i class="fa-solid fa-right-left text-lg"></i></button>
+
+          <!-- Sign Up CTA Button -->
+          <a href="signup.html" class="hidden sm:inline-flex btn-coral px-5 py-2 text-xs font-bold shadow-md hover:scale-105 transition-all">
+            Sign Up
+          </a>
+
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200" title="Open Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 transform translate-x-full transition-transform duration-300 md:hidden">
+    <div class="fixed inset-0 bg-black/40 backdrop-blur-sm" id="close-mobile-menu"></div>
+    <div class="relative ml-auto w-4/5 max-w-sm h-full bg-white dark:bg-gray-900 shadow-2xl p-6 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-100 dark:border-gray-800">
+          <div class="flex items-center gap-2"><i class="fa-solid fa-gift text-coral text-2xl"></i><span class="font-heading font-bold text-xl text-gray-900 dark:text-white">Aura</span></div>
+          <button class="p-2 text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <i class="fa-solid fa-xmark text-xl"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-3 text-base font-semibold">
+          <div class="flex items-center gap-1.5 p-1 bg-gray-100 dark:bg-gray-800 rounded-xl border border-gray-200/50 dark:border-gray-700/50 mb-2">
+            <a href="index.html" class="flex-1 py-2 px-3 text-center text-xs font-bold rounded-lg text-gray-700 dark:text-gray-300 hover:text-coral hover:bg-coral/10 transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-house text-xs"></i> Home 1
+            </a>
+            <a href="index2.html" class="flex-1 py-2 px-3 text-center text-xs font-bold rounded-lg bg-coral text-white shadow-sm transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-gem text-xs"></i> Home 2
+            </a>
+          </div>
+          <a href="about.html" class="text-gray-700 dark:text-gray-200 flex items-center gap-3 p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800">
+            <i class="fa-solid fa-circle-info"></i> About Us
+          </a>
+          <a href="shop.html" class="text-gray-700 dark:text-gray-200 flex items-center gap-3 p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800">
+            <i class="fa-solid fa-store"></i> Shop Catalog
+          </a>
+          <a href="personalization.html" class="text-gray-700 dark:text-gray-200 flex items-center gap-3 p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Custom Gifts
+          </a>
+          <a href="contact.html" class="text-gray-700 dark:text-gray-200 flex items-center gap-3 p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800">
+            <i class="fa-solid fa-envelope"></i> Contact Support
+          </a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-gray-100 dark:border-gray-800 space-y-3">
+        <a href="login.html" class="w-full btn-outline-forest py-2.5 text-center text-sm font-semibold rounded-full block">Log In</a>
+        <a href="signup.html" class="w-full btn-coral py-2.5 text-center text-sm font-semibold rounded-full block">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow">
+
+    <!-- ================= 1. HOME 2 HERO WITH INTERACTIVE GIFT FINDER ================= -->
+    <section class="relative py-12 lg:py-20 bg-gradient-to-b from-cream via-coral/10 to-cream dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <span class="badge-coral"><i class="fa-solid fa-crown mr-1"></i> Edition 2: Luxury Collection</span>
+            <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-gray-900 dark:text-white leading-tight">
+              Personalized Gifts That Tell <span class="text-transparent bg-clip-text bg-gradient-to-r from-coral to-amber-500">Your Story</span>
+            </h1>
+            <p class="text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
+              Curated artisanal gift hampers, engraved heirloom boxes, and bespoke souvenirs handcrafted with love in our boutique studio.
+            </p>
+
+            <!-- INTERACTIVE QUICK GIFT FINDER WIDGET -->
+            <div class="glass-panel p-5 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-xl space-y-4">
+              <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-forest dark:text-emerald-400 flex items-center gap-2">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Instant Gift Match Finder
+              </h4>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-[10px] font-bold uppercase text-gray-500 mb-1">For Whom?</label>
+                  <select id="finder-recipient" class="w-full pl-3 pr-8 py-2 text-xs rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-medium focus:outline-none focus:border-coral">
+                    <option>Partner / Spouse</option>
+                    <option>Parents</option>
+                    <option>Friends</option>
+                    <option>Colleague / Boss</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-[10px] font-bold uppercase text-gray-500 mb-1">Occasion</label>
+                  <select id="finder-occasion" class="w-full pl-3 pr-8 py-2 text-xs rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-medium focus:outline-none focus:border-coral">
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Festival">Festival</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-[10px] font-bold uppercase text-gray-500 mb-1">Budget</label>
+                  <select class="w-full pl-3 pr-8 py-2 text-xs rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-medium focus:outline-none focus:border-coral">
+                    <option>Under $35</option>
+                    <option>$35 - $60</option>
+                    <option>$60+</option>
+                  </select>
+                </div>
+              </div>
+
+              <button onclick="const occ = document.getElementById('finder-occasion').value; window.location.href='shop.html?occasion=' + occ;" class="w-full btn-coral py-2.5 text-xs font-bold rounded-xl shadow-md">
+                Find Perfect Gifts Now <i class="fa-solid fa-arrow-right ml-1"></i>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Hero 2 Showcase Image -->
+          <div class="lg:col-span-6 relative">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
+              <img src="images/hero_banner_2.png" alt="Luxury Gift Hamper Flatlay" class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+              
+              <!-- Hotspot 1 -->
+              <div class="absolute top-1/4 left-1/3 group">
+                <div class="w-7 h-7 rounded-full bg-coral text-white flex items-center justify-center font-bold text-xs animate-ping absolute"></div>
+                <div class="w-7 h-7 rounded-full bg-coral text-white flex items-center justify-center font-bold text-xs relative cursor-pointer shadow-lg">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 glass-panel p-3 rounded-xl text-[11px] shadow-xl text-gray-900 dark:text-white font-medium">
+                  <strong>Hand-carved Oak Lid</strong> with custom gold laser foil inscription.
+                </div>
+              </div>
+
+              <!-- Hotspot 2 -->
+              <div class="absolute bottom-1/3 right-1/4 group">
+                <div class="w-7 h-7 rounded-full bg-forest text-white flex items-center justify-center font-bold text-xs animate-ping absolute"></div>
+                <div class="w-7 h-7 rounded-full bg-forest text-white flex items-center justify-center font-bold text-xs relative cursor-pointer shadow-lg">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 glass-panel p-3 rounded-xl text-[11px] shadow-xl text-gray-900 dark:text-white font-medium">
+                  <strong>Botanical Soy Wax</strong> candle with lavender & vanilla essential oils.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= 2. DEAL OF THE DAY COUNTDOWN BANNER ================= -->
+    <section class="py-12 bg-white dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="glass-panel rounded-3xl p-8 md:p-12 border border-coral/20 bg-gradient-to-r from-cream via-coral/10 to-cream dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 shadow-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7 space-y-4">
+              <span class="badge-coral"><i class="fa-solid fa-bolt mr-1"></i> Flash Hamper Sale</span>
+              <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white">
+                Deluxe Anniversary Keepsake Bundle
+              </h2>
+              <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300">
+                Includes custom engraved wooden keepsake box, 2 lead-free crystal wine glasses, and personalized photo plaque in a velvet hamper.
+              </p>
+              
+              <!-- Countdown Timer -->
+              <div class="flex items-center gap-3 pt-2">
+                <div class="text-center px-4 py-2 bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                  <span class="block font-heading font-bold text-xl text-coral">08</span>
+                  <span class="text-[10px] text-gray-400 uppercase">Hours</span>
+                </div>
+                <span class="font-bold text-coral">:</span>
+                <div class="text-center px-4 py-2 bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                  <span class="block font-heading font-bold text-xl text-coral">42</span>
+                  <span class="text-[10px] text-gray-400 uppercase">Mins</span>
+                </div>
+                <span class="font-bold text-coral">:</span>
+                <div class="text-center px-4 py-2 bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                  <span class="block font-heading font-bold text-xl text-coral">15</span>
+                  <span class="text-[10px] text-gray-400 uppercase">Secs</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 text-center lg:text-right space-y-4">
+              <div class="inline-block">
+                <span class="text-3xl font-black text-gray-900 dark:text-white">$79.99</span>
+                <span class="text-sm line-through text-gray-400 ml-2">$115.00</span>
+                <span class="block text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-1">Save 30% Today Only</span>
+              </div>
+              <div>
+                <button onclick="addToCart('prod-1', 1, 'Anniversary Bundle Deal')" class="btn-coral font-bold py-3.5 px-8 text-sm shadow-lg">
+                  Claim Deal Now <i class="fa-solid fa-cart-shopping ml-2"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= 3. BEST SELLER PRODUCTS GRID ================= -->
+    <section class="py-16 bg-cream/50 dark:bg-gray-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="badge-forest mb-2 inline-block">Handpicked Selection</span>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-gray-900 dark:text-white">Curated Luxury Gift Collection</h2>
+        </div>
+
+        <div id="featured-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Dynamically populated by JS -->
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= 4. LIVE CUSTOMER HAPPINESS TICKER ================= -->
+    <section class="py-12 bg-white dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-forest dark:text-emerald-400">Live Studio Activity</span>
+          </div>
+          <div class="text-xs text-gray-600 dark:text-gray-300 font-medium text-center md:text-left">
+            <i class="fa-solid fa-box text-coral mr-1.5"></i> <strong>Jessica M. (San Francisco)</strong> just ordered <em>"Custom Engraved Wooden Keepsake Box"</em> 4 mins ago!
+          </div>
+          <a href="shop.html" class="text-xs font-bold text-coral hover:underline">View Live Catalog &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= 5. VIP GIFT CLUB NEWSLETTER ================= -->
+    <section class="py-16 bg-gradient-to-r from-forest to-forest-dark text-white relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+        <span class="badge-coral text-xs">VIP Membership</span>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl">Join the Aura VIP Club</h2>
+        <p class="text-emerald-100 text-sm max-w-xl mx-auto">Get early access to holiday drop collections, free gift engraving vouchers, and 15% off your next order.</p>
+        
+        <form class="newsletter-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input type="email" required placeholder="Enter your email address" class="px-5 py-3.5 rounded-full bg-white/10 text-white placeholder-emerald-200/70 border border-white/20 focus:outline-none focus:bg-white focus:text-gray-900 text-sm flex-1">
+          <button type="submit" class="btn-coral font-bold py-3.5 px-8 text-sm">
+            Join VIP Club <i class="fa-solid fa-crown text-xs ml-1"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->  <footer class="bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-300 pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-gray-200 dark:border-gray-800">
+        
+        <!-- Brand & Address Column -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-2.5">
+            <div class="w-10 h-10 rounded-xl bg-coral flex items-center justify-center text-white">
+              <i class="fa-solid fa-gift text-lg"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-heading font-extrabold text-2xl tracking-tight text-gray-900 dark:text-white leading-none">
+                Aura
+              </span>
+              <span class="text-[10px] tracking-widest text-forest dark:text-emerald-400 font-semibold uppercase mt-0.5">Souvenirs & Custom</span>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-sm">
+            Aura is a boutique studio creating handcrafted personalized gifts, custom engravings, and authentic souvenirs that capture life’s milestone moments.
+          </p>
+          <div class="space-y-2 text-xs text-gray-500 dark:text-gray-400 pt-2">
+            <p><i class="fa-solid fa-location-dot text-coral w-5"></i> 742 Artisan Boulevard, Creative District, NY 10012</p>
+            <p><i class="fa-solid fa-phone text-coral w-5"></i> +1 (800) 555-GIFT / +1 (800) 555-4438</p>
+            <p><i class="fa-solid fa-envelope text-coral w-5"></i> support@auragifts.com</p>
+            <p><i class="fa-solid fa-clock text-coral w-5"></i> Mon - Sat: 9:00 AM - 8:00 PM EST</p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-heading font-bold text-gray-900 dark:text-white text-sm mb-4 uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-coral transition-colors">Home</a></li>
+            <li><a href="shop.html" class="hover:text-coral transition-colors">Shop Catalog</a></li>
+            <li><a href="personalization.html" class="hover:text-coral transition-colors">Personalization Services</a></li>
+            <li><a href="about.html" class="hover:text-coral transition-colors">Our Story & Mission</a></li>
+            <li><a href="contact.html" class="hover:text-coral transition-colors">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Gift Categories -->
+        <div>
+          <h4 class="font-heading font-bold text-gray-900 dark:text-white text-sm mb-4 uppercase tracking-wider">Gift Categories</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="shop.html?category=Birthday" class="hover:text-coral transition-colors">Birthday Gifts</a></li>
+            <li><a href="shop.html?category=Anniversary" class="hover:text-coral transition-colors">Anniversary Gifts</a></li>
+            <li><a href="shop.html?category=Wedding" class="hover:text-coral transition-colors">Wedding Hampers</a></li>
+            <li><a href="shop.html?category=Festival" class="hover:text-coral transition-colors">Festival Collections</a></li>
+            <li><a href="shop.html?category=Souvenirs" class="hover:text-coral transition-colors">Handmade Souvenirs</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media & Business Hours -->
+        <div>
+          <h4 class="font-heading font-bold text-gray-900 dark:text-white text-sm mb-4 uppercase tracking-wider">Connect With Us</h4>
+          <div class="flex gap-3 mb-6">
+            <a href="#" class="w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 flex items-center justify-center hover:bg-coral dark:hover:bg-coral hover:text-white dark:hover:text-white transition-colors">
+              <i class="fa-brands fa-facebook-f text-xs"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 flex items-center justify-center hover:bg-coral dark:hover:bg-coral hover:text-white dark:hover:text-white transition-colors">
+              <i class="fa-brands fa-instagram text-xs"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 flex items-center justify-center hover:bg-coral dark:hover:bg-coral hover:text-white dark:hover:text-white transition-colors">
+              <i class="fa-brands fa-pinterest-p text-xs"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 flex items-center justify-center hover:bg-coral dark:hover:bg-coral hover:text-white dark:hover:text-white transition-colors">
+              <i class="fa-brands fa-youtube text-xs"></i>
+            </a>
+          </div>
+          <p class="text-[11px] text-gray-500">Need help customizing an order? Chat with our artisan team live on WhatsApp.</p>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <p>&copy; 2026 Aura Inc. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+          <a href="#" class="hover:underline">Shipping & Returns</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DRAWERS & MODALS -->
+  <div id="cart-drawer" class="hidden fixed inset-0 z-50 overflow-hidden"><div class="absolute inset-0 bg-black/40" id="close-cart-drawer"></div><div class="fixed inset-y-0 right-0 max-w-full flex pl-10"><div class="w-screen max-w-md bg-white dark:bg-gray-900 p-6 flex flex-col justify-between"><div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-gray-800"><h3 class="font-bold text-lg">Cart</h3></div><div id="cart-items-container" class="mt-4 max-h-[60vh] overflow-y-auto"></div><div class="pt-4 border-t"><div class="flex justify-between font-bold"><span>Total</span><span id="cart-total">$0.00</span></div></div></div></div></div>
+  <div id="wishlist-drawer" class="hidden fixed inset-0 z-50 overflow-hidden"><div class="absolute inset-0 bg-black/40" id="close-wishlist-drawer"></div><div class="fixed inset-y-0 right-0 max-w-full flex pl-10"><div class="w-screen max-w-md bg-white dark:bg-gray-900 p-6"><div id="wishlist-items-container"></div></div></div></div>
+  <div id="quick-view-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4"><div class="fixed inset-0 bg-black/60" id="close-quick-view"></div><div class="relative bg-white dark:bg-gray-900 rounded-3xl p-6 max-w-3xl w-full z-10"><div id="quick-view-content"></div></div></div>
+  <button id="back-to-top" class="fixed bottom-6 left-6 z-40 p-3.5 rounded-full bg-forest text-white shadow-xl opacity-0 pointer-events-none hover:bg-coral transition-all"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
